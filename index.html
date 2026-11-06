@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>QubitSemi Solutions · Semiconductor, Quantum, AI Engineering</title>
+<meta name="description" content="Hyderabad engineering company: IP/SoC design, verification, FPGA validation and silicon bring-up, plus quantum technologies and AI/ML & data engineering." />
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="QubitSemi Solutions" />
+<meta property="og:title" content="QubitSemi Solutions · Semiconductor, Quantum, AI Engineering" />
+<meta property="og:description" content="Hyderabad engineering company: IP/SoC design, verification, FPGA validation and silicon bring-up, plus quantum technologies and AI/ML & data engineering." />
+<meta property="og:url" content="https://www.qubitsemisolutions.com/" />
+<meta property="og:image" content="https://www.qubitsemisolutions.com/og.png" />
+<meta property="og:image:alt" content="QubitSemi Solutions — semiconductors, quantum technologies and beyond" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="QubitSemi Solutions · Semiconductor, Quantum, AI Engineering" />
+<meta name="twitter:description" content="Hyderabad engineering company: IP/SoC design, verification, FPGA validation and silicon bring-up, plus quantum technologies and AI/ML & data engineering." />
+<meta name="twitter:image" content="https://www.qubitsemisolutions.com/og.png" />
+<link rel="canonical" href="https://www.qubitsemisolutions.com/" />
+<link rel="alternate" hreflang="en-IN" href="https://www.qubitsemisolutions.com/" />
+<link rel="alternate" hreflang="x-default" href="https://www.qubitsemisolutions.com/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "QubitSemi Solutions Private Limited",
+  "alternateName": "QubitSemi Solutions",
+  "url": "https://www.qubitsemisolutions.com/",
+  "logo": "https://www.qubitsemisolutions.com/logo.png",
+  "image": "https://www.qubitsemisolutions.com/og.png",
+  "description": "Engineering-driven semiconductor and quantum technology services from Hyderabad. IP to silicon, end-to-end.",
+  "email": "sales@qubitsemisolutions.com",
+  "contactPoint": [
+    { "@type": "ContactPoint", "contactType": "sales", "email": "sales@qubitsemisolutions.com", "areaServed": "IN" },
+    { "@type": "ContactPoint", "contactType": "human resources", "email": "careers@qubitsemisolutions.com", "areaServed": "IN" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3H, Dwaraka Pride, Plot No. 4/1, Survey No. 64, Huda Techno Enclave, Madhapur, HITEC City",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500081",
+    "addressCountry": "IN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 17.44496, "longitude": 78.38548 },
+  "areaServed": "IN",
+  "knowsAbout": [
+    "VLSI Design", "Design Verification", "SystemVerilog", "UVM", "FPGA",
+    "Silicon Bring-Up", "Quantum Computing", "Quantum Cryptography",
+    "Post-Quantum Cryptography", "Quantum Key Distribution",
+    "Generative AI", "Agentic AI", "Machine Learning", "Data Engineering"
+  ]
+}
+</script>
+<script>/* runs before first paint: theme, js flag, page-transition support and the once-per-visit opening scene */
+(function(d){d.classList.add('js');if('CSSViewTransitionRule' in window)d.classList.add('vt');try{if(!sessionStorage.getItem('qsmi-intro')&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){sessionStorage.setItem('qsmi-intro','1');d.classList.add('intro','intro-wait');var go=function(){d.classList.remove('intro-wait')};document.addEventListener('DOMContentLoaded',function(){try{document.fonts.load('600 1em "Space Grotesk"').then(go,go)}catch(e){go()}});setTimeout(go,1100);setTimeout(function(){d.classList.remove('intro')},4200)}}catch(e){}var t=null;try{t=localStorage.getItem('qsmi-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='dark'?'#060c1a':'#ffffff')})(document.documentElement);</script>
+<link rel="stylesheet" href="styles.css?v=20261104f" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ─── MASTHEAD ─────────────────────────────────────────── -->
+<header class="masthead" role="banner">
+  <div class="container masthead-inner">
+
+    <a href="index.html" class="masthead-logo" aria-label="QubitSemi Solutions — home">
+      <img class="masthead-logo-img logo-light" src="logo.png" alt="QubitSemi Solutions" width="297" height="81" />
+      <img class="masthead-logo-img logo-dark" src="logo-dark.png" alt="" width="297" height="81" aria-hidden="true" />
+    </a>
+
+    <nav class="masthead-nav" aria-label="Primary">
+      <a href="index.html" class="active">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="training.html">Training</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="masthead-actions">
+      <button type="button" class="theme-toggle-pill" data-theme-toggle aria-label="Switch theme">
+        <span class="theme-icon-light" aria-hidden="true">☼</span>
+        <span class="theme-icon-dark" aria-hidden="true">☾</span>
+        <span class="theme-label">Light</span>
+      </button>
+      <a href="contact.html" class="btn-cta">Get in Touch <span aria-hidden="true">→</span></a>
+    </div>
+
+    <button type="button" class="masthead-burger" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span>
+    </button>
+
+  </div>
+</header>
+
+<div class="nav-scrim" data-nav-scrim aria-hidden="true"></div>
+
+<div class="nav-drawer" id="mobile-nav" data-nav-drawer aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="index.html">About</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="training.html">Training</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn-cta nav-drawer-cta">Get in Touch <span aria-hidden="true">→</span></a>
+  <p class="nav-drawer-meta">
+    3H, Dwaraka Pride<br>Huda Techno Enclave, Madhapur<br>HITEC City, Hyderabad 500081<br>
+    <a href="mailto:sales@qubitsemisolutions.com">sales@qubitsemisolutions.com</a><br>
+    <a href="mailto:careers@qubitsemisolutions.com">careers@qubitsemisolutions.com</a>
+  </p>
+</div>
+
+
+<main id="main" tabindex="-1" class="hv2">
+
+<!-- ─── HERO · headline + one die illustration (identical in both themes) ─── -->
+<div class="hv2-scene" data-story>
+<section class="hv2-hero" aria-labelledby="hv2-title">
+  <div class="container hv2-railed">
+    <div class="hv2-hero-grid">
+      <div class="hv2-hero-main">
+        <p class="hv2-net hv2-hero-net"><span class="hv2-via" aria-hidden="true"></span>Semiconductors · Quantum · Beyond</p>
+
+        <h1 class="hv2-title" id="hv2-title">
+          <span class="hv2-title-line">Silicon, verified.</span>
+          <span class="hv2-title-line hv2-title-accent">Quantum, engineered.</span>
+        </h1>
+
+        <p class="hv2-hero-sub">An engineering-driven technology company delivering semiconductor engineering services — from IP and SoC design and verification to FPGA validation and post-silicon bring-up — and collaborating across quantum technologies and next-generation computing.</p>
+
+        <div class="hv2-hero-ctas">
+          <a href="contact.html" class="btn-cta">Start a project <span aria-hidden="true">→</span></a>
+          <a href="#stack" class="btn-cta-outline" data-story-jump>Look inside the stack <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <ul class="hv2-hero-points">
+          <li><b>VLSI</b> IP &amp; SoC · verification · bring-up</li>
+          <li><b>Quantum</b> computing · cryptography · hardware</li>
+          <li><b>AI/ML</b> intelligent systems · data engineering</li>
+        </ul>
+      </div>
+
+      <figure class="hv2-die hv2-chip3d">
+        <div class="hv2-die-frame">
+          <div class="hv2-3d" data-chip3d role="img" aria-label="Illustrative chip stack separated into four layers: a circuit board, the chip package, a system-on-chip die with CPU cores, network-on-chip, post-quantum crypto and QRNG blocks, and a qubit layer on top.">
+            <div class="hv2-3d-stage">
+              <div class="hv2-3d-shadow"></div>
+              <div class="hv2-3d-layer hv2-3d-board">
+                <span class="hv2-3d-tag"><b>Board</b><small>PCB · power · I/O</small></span>
+              </div>
+              <div class="hv2-3d-layer hv2-3d-pkg">
+                <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="hv2-3d-pkgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16275e"/><stop offset="1" stop-color="#0a1934"/></linearGradient></defs>
+              <rect x=".5" y=".5" width="99" height="99" rx="4" fill="url(#hv2-3d-pkgf)" stroke="#5e77ca" stroke-opacity=".65" stroke-width=".6"/>
+              <rect x="5.5" y="5.5" width="89" height="89" rx="2" fill="none" stroke="#c89456" stroke-width="3" stroke-dasharray="1.4 2.1"/>
+              <rect x="13.2" y="13.2" width="73.6" height="73.6" rx="1" fill="#071328" stroke="#92acff" stroke-opacity=".35" stroke-width=".5"/>
+              <circle cx="3.6" cy="3.6" r="1.4" fill="none" stroke="#c89456" stroke-width=".6"/>
+            </svg>
+                <span class="hv2-3d-tag"><b>Package</b><small>Substrate · bond fingers</small></span>
+              </div>
+              <div class="hv2-3d-layer hv2-3d-die">
+                <svg class="hv2-die-svg" viewBox="96 96 408 408" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="hv2-pkg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#11244a"/><stop offset="1" stop-color="#081329"/></linearGradient>
+            <linearGradient id="hv2-dief" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#15265c"/><stop offset=".55" stop-color="#0e2246"/><stop offset="1" stop-color="#0b1a38"/></linearGradient>
+            <linearGradient id="hv2-sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".10"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+            <radialGradient id="hv2-qglow" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#91abff" stop-opacity=".30"/><stop offset="1" stop-color="#91abff" stop-opacity="0"/></radialGradient>
+            <pattern id="hv2-bits" width="6" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#92acff" fill-opacity=".22"/></pattern>
+            <pattern id="hv2-std" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 .5H8M0 4.5H5" stroke="#92acff" stroke-opacity=".14" stroke-width="1"/></pattern>
+          </defs>
+          <rect x="6" y="6" width="588" height="588" rx="28" fill="url(#hv2-pkg)" stroke="#3a54a8" stroke-opacity=".55"/>
+          <rect x="20" y="20" width="560" height="560" rx="18" fill="none" stroke="#94adff" stroke-opacity=".10"/>
+          <g fill="#c89456" fill-opacity=".85"><rect x="67.0" y="34" width="6" height="16" rx="1"/><rect x="67.0" y="550" width="6" height="16" rx="1"/><rect x="34" y="67.0" width="16" height="6" rx="1"/><rect x="550" y="67.0" width="16" height="6" rx="1"/><rect x="99.9" y="34" width="6" height="16" rx="1"/><rect x="99.9" y="550" width="6" height="16" rx="1"/><rect x="34" y="99.9" width="16" height="6" rx="1"/><rect x="550" y="99.9" width="16" height="6" rx="1"/><rect x="132.7" y="34" width="6" height="16" rx="1"/><rect x="132.7" y="550" width="6" height="16" rx="1"/><rect x="34" y="132.7" width="16" height="6" rx="1"/><rect x="550" y="132.7" width="16" height="6" rx="1"/><rect x="165.6" y="34" width="6" height="16" rx="1"/><rect x="165.6" y="550" width="6" height="16" rx="1"/><rect x="34" y="165.6" width="16" height="6" rx="1"/><rect x="550" y="165.6" width="16" height="6" rx="1"/><rect x="198.4" y="34" width="6" height="16" rx="1"/><rect x="198.4" y="550" width="6" height="16" rx="1"/><rect x="34" y="198.4" width="16" height="6" rx="1"/><rect x="550" y="198.4" width="16" height="6" rx="1"/><rect x="231.3" y="34" width="6" height="16" rx="1"/><rect x="231.3" y="550" width="6" height="16" rx="1"/><rect x="34" y="231.3" width="16" height="6" rx="1"/><rect x="550" y="231.3" width="16" height="6" rx="1"/><rect x="264.1" y="34" width="6" height="16" rx="1"/><rect x="264.1" y="550" width="6" height="16" rx="1"/><rect x="34" y="264.1" width="16" height="6" rx="1"/><rect x="550" y="264.1" width="16" height="6" rx="1"/><rect x="297.0" y="34" width="6" height="16" rx="1"/><rect x="297.0" y="550" width="6" height="16" rx="1"/><rect x="34" y="297.0" width="16" height="6" rx="1"/><rect x="550" y="297.0" width="16" height="6" rx="1"/><rect x="329.9" y="34" width="6" height="16" rx="1"/><rect x="329.9" y="550" width="6" height="16" rx="1"/><rect x="34" y="329.9" width="16" height="6" rx="1"/><rect x="550" y="329.9" width="16" height="6" rx="1"/><rect x="362.7" y="34" width="6" height="16" rx="1"/><rect x="362.7" y="550" width="6" height="16" rx="1"/><rect x="34" y="362.7" width="16" height="6" rx="1"/><rect x="550" y="362.7" width="16" height="6" rx="1"/><rect x="395.6" y="34" width="6" height="16" rx="1"/><rect x="395.6" y="550" width="6" height="16" rx="1"/><rect x="34" y="395.6" width="16" height="6" rx="1"/><rect x="550" y="395.6" width="16" height="6" rx="1"/><rect x="428.4" y="34" width="6" height="16" rx="1"/><rect x="428.4" y="550" width="6" height="16" rx="1"/><rect x="34" y="428.4" width="16" height="6" rx="1"/><rect x="550" y="428.4" width="16" height="6" rx="1"/><rect x="461.3" y="34" width="6" height="16" rx="1"/><rect x="461.3" y="550" width="6" height="16" rx="1"/><rect x="34" y="461.3" width="16" height="6" rx="1"/><rect x="550" y="461.3" width="16" height="6" rx="1"/><rect x="494.1" y="34" width="6" height="16" rx="1"/><rect x="494.1" y="550" width="6" height="16" rx="1"/><rect x="34" y="494.1" width="16" height="6" rx="1"/><rect x="550" y="494.1" width="16" height="6" rx="1"/><rect x="527.0" y="34" width="6" height="16" rx="1"/><rect x="527.0" y="550" width="6" height="16" rx="1"/><rect x="34" y="527.0" width="16" height="6" rx="1"/><rect x="550" y="527.0" width="16" height="6" rx="1"/></g>
+          <path class="hv2-die-wires" d="M128.0 106 L70.0 48 M128.0 494 L70.0 552 M106 128.0 L48 70.0 M494 128.0 L552 70.0 M152.6 106 L102.9 48 M152.6 494 L102.9 552 M106 152.6 L48 102.9 M494 152.6 L552 102.9 M177.1 106 L135.7 48 M177.1 494 L135.7 552 M106 177.1 L48 135.7 M494 177.1 L552 135.7 M201.7 106 L168.6 48 M201.7 494 L168.6 552 M106 201.7 L48 168.6 M494 201.7 L552 168.6 M226.3 106 L201.4 48 M226.3 494 L201.4 552 M106 226.3 L48 201.4 M494 226.3 L552 201.4 M250.9 106 L234.3 48 M250.9 494 L234.3 552 M106 250.9 L48 234.3 M494 250.9 L552 234.3 M275.4 106 L267.1 48 M275.4 494 L267.1 552 M106 275.4 L48 267.1 M494 275.4 L552 267.1 M300.0 106 L300.0 48 M300.0 494 L300.0 552 M106 300.0 L48 300.0 M494 300.0 L552 300.0 M324.6 106 L332.9 48 M324.6 494 L332.9 552 M106 324.6 L48 332.9 M494 324.6 L552 332.9 M349.1 106 L365.7 48 M349.1 494 L365.7 552 M106 349.1 L48 365.7 M494 349.1 L552 365.7 M373.7 106 L398.6 48 M373.7 494 L398.6 552 M106 373.7 L48 398.6 M494 373.7 L552 398.6 M398.3 106 L431.4 48 M398.3 494 L431.4 552 M106 398.3 L48 431.4 M494 398.3 L552 431.4 M422.9 106 L464.3 48 M422.9 494 L464.3 552 M106 422.9 L48 464.3 M494 422.9 L552 464.3 M447.4 106 L497.1 48 M447.4 494 L497.1 552 M106 447.4 L48 497.1 M494 447.4 L552 497.1 M472.0 106 L530.0 48 M472.0 494 L530.0 552 M106 472.0 L48 530.0 M494 472.0 L552 530.0" stroke="#e0b47c" stroke-opacity=".55" stroke-width=".9" fill="none"/>
+          <rect x="96" y="96" width="408" height="408" rx="3" fill="url(#hv2-dief)" stroke="#627dd6" stroke-opacity=".75"/>
+          <rect x="100.5" y="100.5" width="399" height="399" fill="none" stroke="#92acff" stroke-opacity=".28"/>
+          <rect x="120.5" y="120.5" width="359" height="359" fill="none" stroke="#92acff" stroke-opacity=".16" stroke-dasharray="2 3"/>
+          <g fill="#c89456" stroke="#f0c992" stroke-opacity=".5" stroke-width=".8"><rect x="122.5" y="104" width="11" height="11"/><rect x="122.5" y="485" width="11" height="11"/><rect x="104" y="122.5" width="11" height="11"/><rect x="485" y="122.5" width="11" height="11"/><rect x="147.1" y="104" width="11" height="11"/><rect x="147.1" y="485" width="11" height="11"/><rect x="104" y="147.1" width="11" height="11"/><rect x="485" y="147.1" width="11" height="11"/><rect x="171.6" y="104" width="11" height="11"/><rect x="171.6" y="485" width="11" height="11"/><rect x="104" y="171.6" width="11" height="11"/><rect x="485" y="171.6" width="11" height="11"/><rect x="196.2" y="104" width="11" height="11"/><rect x="196.2" y="485" width="11" height="11"/><rect x="104" y="196.2" width="11" height="11"/><rect x="485" y="196.2" width="11" height="11"/><rect x="220.8" y="104" width="11" height="11"/><rect x="220.8" y="485" width="11" height="11"/><rect x="104" y="220.8" width="11" height="11"/><rect x="485" y="220.8" width="11" height="11"/><rect x="245.4" y="104" width="11" height="11"/><rect x="245.4" y="485" width="11" height="11"/><rect x="104" y="245.4" width="11" height="11"/><rect x="485" y="245.4" width="11" height="11"/><rect x="269.9" y="104" width="11" height="11"/><rect x="269.9" y="485" width="11" height="11"/><rect x="104" y="269.9" width="11" height="11"/><rect x="485" y="269.9" width="11" height="11"/><rect x="294.5" y="104" width="11" height="11"/><rect x="294.5" y="485" width="11" height="11"/><rect x="104" y="294.5" width="11" height="11"/><rect x="485" y="294.5" width="11" height="11"/><rect x="319.1" y="104" width="11" height="11"/><rect x="319.1" y="485" width="11" height="11"/><rect x="104" y="319.1" width="11" height="11"/><rect x="485" y="319.1" width="11" height="11"/><rect x="343.6" y="104" width="11" height="11"/><rect x="343.6" y="485" width="11" height="11"/><rect x="104" y="343.6" width="11" height="11"/><rect x="485" y="343.6" width="11" height="11"/><rect x="368.2" y="104" width="11" height="11"/><rect x="368.2" y="485" width="11" height="11"/><rect x="104" y="368.2" width="11" height="11"/><rect x="485" y="368.2" width="11" height="11"/><rect x="392.8" y="104" width="11" height="11"/><rect x="392.8" y="485" width="11" height="11"/><rect x="104" y="392.8" width="11" height="11"/><rect x="485" y="392.8" width="11" height="11"/><rect x="417.4" y="104" width="11" height="11"/><rect x="417.4" y="485" width="11" height="11"/><rect x="104" y="417.4" width="11" height="11"/><rect x="485" y="417.4" width="11" height="11"/><rect x="441.9" y="104" width="11" height="11"/><rect x="441.9" y="485" width="11" height="11"/><rect x="104" y="441.9" width="11" height="11"/><rect x="485" y="441.9" width="11" height="11"/><rect x="466.5" y="104" width="11" height="11"/><rect x="466.5" y="485" width="11" height="11"/><rect x="104" y="466.5" width="11" height="11"/><rect x="485" y="466.5" width="11" height="11"/></g>
+          <circle cx="44" cy="44" r="5" fill="none" stroke="#c89456" stroke-width="1.5"/>
+          <path d="M104 104 L118 104 L104 118 Z" fill="#92acff" fill-opacity=".55"/>
+          <rect x="132" y="132" width="336" height="336" fill="url(#hv2-std)"/>
+          <rect x="132" y="132" width="28" height="160" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <text class="hv2-die-lbl" transform="translate(150 212) rotate(-90)" text-anchor="middle">PCIe PHY</text>
+          <rect x="132" y="300" width="28" height="130" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <text class="hv2-die-lbl" transform="translate(150 365) rotate(-90)" text-anchor="middle">I²C·SPI·UART</text>
+          <rect x="168" y="438" width="300" height="30" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <text class="hv2-die-lbl" x="318" y="457" text-anchor="middle">DDR3 PHY</text>
+          <g stroke="#92acff" stroke-opacity=".35"><path d="M178 442V448"/><path d="M190 442V448"/><path d="M202 442V448"/><path d="M214 442V448"/><path d="M226 442V448"/><path d="M238 442V448"/><path d="M250 442V448"/><path d="M262 442V448"/><path d="M274 442V448"/><path d="M286 442V448"/><path d="M298 442V448"/><path d="M310 442V448"/><path d="M322 442V448"/><path d="M334 442V448"/><path d="M346 442V448"/><path d="M358 442V448"/><path d="M370 442V448"/><path d="M382 442V448"/><path d="M394 442V448"/><path d="M406 442V448"/><path d="M418 442V448"/><path d="M430 442V448"/><path d="M442 442V448"/><path d="M454 442V448"/><path d="M466 442V448"/></g>
+          <rect x="168" y="132" width="66" height="58" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <rect x="174" y="166" width="22" height="18" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".3"/>
+          <text class="hv2-die-lbl" x="176" y="150">CPU0</text>
+          <rect x="240" y="132" width="66" height="58" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <rect x="246" y="166" width="22" height="18" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".3"/>
+          <text class="hv2-die-lbl" x="248" y="150">CPU1</text>
+          <rect x="168" y="196" width="66" height="58" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <rect x="174" y="230" width="22" height="18" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".3"/>
+          <text class="hv2-die-lbl" x="176" y="214">CPU2</text>
+          <rect x="240" y="196" width="66" height="58" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <rect x="246" y="230" width="22" height="18" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".3"/>
+          <text class="hv2-die-lbl" x="248" y="214">CPU3</text>
+          <rect x="168" y="260" width="138" height="24" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <text class="hv2-die-lbl" x="237" y="276" text-anchor="middle">L2 CACHE</text>
+          <rect x="168" y="308" width="67" height="36" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".4"/>
+          <rect x="239" y="308" width="67" height="36" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".4"/>
+          <rect x="168" y="348" width="67" height="36" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".4"/>
+          <rect x="239" y="348" width="67" height="36" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".4"/>
+          <rect x="168" y="388" width="67" height="36" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".4"/>
+          <rect x="239" y="388" width="67" height="36" fill="url(#hv2-bits)" stroke="#92acff" stroke-opacity=".4"/>
+          <rect x="206" y="358" width="62" height="16" rx="2" fill="#0b1a38"/>
+          <text class="hv2-die-lbl" x="237" y="370" text-anchor="middle">SRAM</text>
+          <rect x="326" y="132" width="142" height="152" fill="url(#hv2-qglow)"/>
+          <rect x="326" y="132" width="142" height="152" fill="#91abff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".8" stroke-width="1.2"/>
+          <text class="hv2-die-lbl hv2-die-lbl--hi" x="334" y="148">QUBIT ARRAY</text>
+          <path d="M346 170H442 M346 170V200 M410 170V200 M346 200H442 M378 200V230 M442 200V230 M346 230H442 M346 230V260 M410 230V260 M346 260H442" stroke="#92acff" stroke-opacity=".55" stroke-width="1.2" fill="none"/>
+          <circle class="hv2-q" cx="346" cy="170" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q hv2-q--on" style="animation-delay:0s" cx="378" cy="170" r="5.5" fill="#abbeff" stroke="#e5ebff" stroke-width="1"/>
+          <circle class="hv2-q" cx="410" cy="170" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q" cx="442" cy="170" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q" cx="346" cy="200" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q" cx="378" cy="200" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q hv2-q--on" style="animation-delay:-1.1s" cx="410" cy="200" r="5.5" fill="#abbeff" stroke="#e5ebff" stroke-width="1"/>
+          <circle class="hv2-q" cx="442" cy="200" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q hv2-q--on" style="animation-delay:-2.3s" cx="346" cy="230" r="5.5" fill="#abbeff" stroke="#e5ebff" stroke-width="1"/>
+          <circle class="hv2-q" cx="378" cy="230" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q" cx="410" cy="230" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q hv2-q--on" style="animation-delay:-0.6s" cx="442" cy="230" r="5.5" fill="#abbeff" stroke="#e5ebff" stroke-width="1"/>
+          <circle class="hv2-q" cx="346" cy="260" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q hv2-q--on" style="animation-delay:-1.7s" cx="378" cy="260" r="5.5" fill="#abbeff" stroke="#e5ebff" stroke-width="1"/>
+          <circle class="hv2-q" cx="410" cy="260" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <circle class="hv2-q" cx="442" cy="260" r="5" fill="#0d2147" stroke="#92acff" stroke-width="1.2"/>
+          <rect x="326" y="308" width="68" height="56" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <text class="hv2-die-lbl" x="360" y="340" text-anchor="middle">PQC</text>
+          <rect x="400" y="308" width="68" height="56" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <text class="hv2-die-lbl" x="434" y="340" text-anchor="middle">QRNG</text>
+          <rect x="326" y="372" width="142" height="58" fill="#92acff" fill-opacity=".05" stroke="#92acff" stroke-opacity=".5" stroke-width="1"/>
+          <text class="hv2-die-lbl" x="397" y="398" text-anchor="middle">QKD KEY ENGINE</text>
+          <g stroke="#92acff" stroke-opacity=".3"><path d="M336 410V420"/><path d="M344 410V420"/><path d="M352 410V420"/><path d="M360 410V420"/><path d="M368 410V420"/><path d="M376 410V420"/><path d="M384 410V420"/><path d="M392 410V420"/><path d="M400 410V420"/><path d="M408 410V420"/><path d="M416 410V420"/><path d="M424 410V420"/><path d="M432 410V420"/><path d="M440 410V420"/><path d="M448 410V420"/><path d="M456 410V420"/></g>
+          <path d="M164 296H472M318 128V434" stroke="#91abff" stroke-opacity=".9" stroke-width="2.4" fill="none"/>
+          <path d="M237 284V296M237 296V308M397 284V296M397 296V308M160 212H164M160 365H164M318 434V438" stroke="#91abff" stroke-opacity=".7" stroke-width="1.4" fill="none"/>
+          <rect x="312" y="290" width="12" height="12" fill="#0b1a38" stroke="#abbeff" stroke-width="1.4"/>
+          <rect x="231" y="290" width="12" height="12" fill="#0b1a38" stroke="#abbeff" stroke-width="1.4"/>
+          <rect x="391" y="290" width="12" height="12" fill="#0b1a38" stroke="#abbeff" stroke-width="1.4"/>
+          <rect x="263" y="289" width="44" height="14" rx="2" fill="#0d2147"/>
+          <text class="hv2-die-lbl hv2-die-lbl--hi" x="285" y="300" text-anchor="middle">NoC</text>
+          <path class="hv2-pulse" d="M164 296H472" />
+          <path class="hv2-pulse hv2-pulse--b" d="M318 128V434" />
+          <path class="hv2-pulse hv2-pulse--c" d="M472 296H164" />
+          <rect x="6" y="6" width="588" height="588" rx="28" fill="url(#hv2-sheen)" pointer-events="none"/>
+          </svg>
+                <span class="hv2-3d-tag"><b>SoC die</b><small>CPU · NoC · PQC · QRNG</small></span>
+              </div>
+              <div class="hv2-3d-layer hv2-3d-q">
+                <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <path d="M20 20H80M20 40H80M20 60H80M20 80H80M20 20V80M40 20V80M60 20V80M80 20V80" stroke="#abbeff" stroke-opacity=".55" stroke-width=".8" fill="none"/>
+              <circle class="hv2-q" cx="20" cy="20" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q hv2-q--on" style="animation-delay:0s" cx="40" cy="20" r="4.2" fill="#c2d0ff" stroke="#e6ebff" stroke-width=".8"/>
+              <circle class="hv2-q" cx="60" cy="20" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q" cx="80" cy="20" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q" cx="20" cy="40" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q" cx="40" cy="40" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q hv2-q--on" style="animation-delay:-1.1s" cx="60" cy="40" r="4.2" fill="#c2d0ff" stroke="#e6ebff" stroke-width=".8"/>
+              <circle class="hv2-q" cx="80" cy="40" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q hv2-q--on" style="animation-delay:-2.3s" cx="20" cy="60" r="4.2" fill="#c2d0ff" stroke="#e6ebff" stroke-width=".8"/>
+              <circle class="hv2-q" cx="40" cy="60" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q" cx="60" cy="60" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q hv2-q--on" style="animation-delay:-0.6s" cx="80" cy="60" r="4.2" fill="#c2d0ff" stroke="#e6ebff" stroke-width=".8"/>
+              <circle class="hv2-q" cx="20" cy="80" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q hv2-q--on" style="animation-delay:-1.7s" cx="40" cy="80" r="4.2" fill="#c2d0ff" stroke="#e6ebff" stroke-width=".8"/>
+              <circle class="hv2-q" cx="60" cy="80" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+              <circle class="hv2-q" cx="80" cy="80" r="3.6" fill="#0d2147" stroke="#abbeff" stroke-width=".9"/>
+            </svg>
+                <span class="hv2-3d-tag"><b>Qubit layer</b><small>Qubits · couplers</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+  <div class="hv2-ticker">
+    <div class="hv2-ticker-track">
+      <ul aria-label="Capabilities">
+        <li>IP &amp; SoC design</li>
+        <li>Design verification</li>
+        <li>SystemVerilog · UVM · SVA</li>
+        <li>FPGA validation</li>
+        <li>Cadence Palladium</li>
+        <li>Post-silicon bring-up</li>
+        <li>RISC-V processors</li>
+        <li>AI/ML accelerators</li>
+        <li>Network-on-Chip</li>
+        <li>Cache coherency</li>
+        <li>Quantum computing</li>
+        <li>QKD · QRNG</li>
+        <li>Post-quantum cryptography</li>
+        <li>Quantum machine learning</li>
+        <li>Quantum hardware architecture</li><li>Quantum communication</li><li>Fault tolerance</li><li>Agentic &amp; generative AI</li><li>Hardware-aware AI/ML</li><li>Cloud data engineering</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>IP &amp; SoC design</li>
+        <li>Design verification</li>
+        <li>SystemVerilog · UVM · SVA</li>
+        <li>FPGA validation</li>
+        <li>Cadence Palladium</li>
+        <li>Post-silicon bring-up</li>
+        <li>RISC-V processors</li>
+        <li>AI/ML accelerators</li>
+        <li>Network-on-Chip</li>
+        <li>Cache coherency</li>
+        <li>Quantum computing</li>
+        <li>QKD · QRNG</li>
+        <li>Post-quantum cryptography</li>
+        <li>Quantum machine learning</li>
+        <li>Quantum hardware architecture</li><li>Quantum communication</li><li>Fault tolerance</li><li>Agentic &amp; generative AI</li><li>Hardware-aware AI/ML</li><li>Cloud data engineering</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INSIDE THE STACK · scroll story (pinned in story mode, a card grid otherwise) ─── -->
+<section class="hv2-story" id="stack" aria-labelledby="hv2-story-title">
+  <div class="hv2-story-stage" data-story-stage></div>
+  <div class="container hv2-railed hv2-story-inner">
+    <header class="hv2-story-head">
+      <p class="hv2-net"><span class="hv2-via" aria-hidden="true"></span>Inside the stack</p>
+      <h2 class="hv2-h2" id="hv2-story-title">Four layers. <span class="hv2-mute">One engineering team.</span></h2>
+      <p class="hv2-lede hv2-story-lede">Each layer of the chip maps to work our engineers do — from the qubits on top to the board underneath.</p>
+      <div class="hv2-story-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </header>
+    <ol class="hv2-story-steps">
+      <li class="hv2-story-step" data-layer="q">
+        <p class="hv2-story-n"><b>01</b> / 04 · Qubit layer</p>
+        <h3>Quantum technologies</h3>
+        <p>Quantum computing, quantum communication, quantum machine learning and quantum semiconductors — through engineering collaboration and technical development with customers and partners.</p>
+        <a class="hv2-link hv2-link--ink" href="solutions.html#quantum">Quantum practice <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="hv2-story-step" data-layer="die">
+        <p class="hv2-story-n"><b>02</b> / 04 · SoC die</p>
+        <h3>IP &amp; SoC design and verification</h3>
+        <p>IP and SoC design and design verification across RISC-V processors, AI/ML accelerators, Network-on-Chip and coherency — with structured methodologies and systematic validation.</p>
+        <a class="hv2-link hv2-link--ink" href="solutions.html#vlsi">VLSI practice <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="hv2-story-step" data-layer="pkg">
+        <p class="hv2-story-n"><b>03</b> / 04 · Package</p>
+        <h3>FPGA validation, emulation &amp; bring-up</h3>
+        <p>FPGA-based prototyping, hardware validation and Cadence Palladium emulation — with practical experience participating in more than 10 silicon bring-up activities.</p>
+        <a class="hv2-link hv2-link--ink" href="solutions.html#vlsi">Bring-up services <span aria-hidden="true">→</span></a>
+      </li>
+      <li class="hv2-story-step" data-layer="board">
+        <p class="hv2-story-n"><b>04</b> / 04 · Board</p>
+        <h3>One team, end to end</h3>
+        <p>Support throughout the product development lifecycle, on engagement models tailored to project requirements, delivery timelines and customer needs — plus hands-on AI and data-engineering training.</p>
+        <a class="hv2-link hv2-link--ink" href="contact.html">Start a project <span aria-hidden="true">→</span></a>
+      </li>
+    </ol>
+  </div>
+</section>
+<div class="hv2-story-track" aria-hidden="true"></div>
+</div>
+
+<!-- ─── KEY FACTS ─── -->
+<section class="hv2-facts-sec" aria-label="Key facts">
+  <div class="container hv2-railed">
+    <dl class="hv2-facts">
+      <div class="hv2-fact">
+        <dt>Focus areas</dt>
+        <dd><span class="hv2-fact-num">4</span><span class="hv2-fact-note">VLSI &amp; semiconductor, quantum, AI/ML &amp; data engineering, next-generation computing</span></dd>
+      </div>
+      <div class="hv2-fact">
+        <dt>Silicon bring-up activities</dt>
+        <dd><span class="hv2-fact-num">10+</span><span class="hv2-fact-note">Hands-on participation in hardware validation and debug</span></dd>
+      </div>
+      <div class="hv2-fact">
+        <dt>Protocols</dt>
+        <dd><span class="hv2-fact-num">9</span><span class="hv2-fact-note">AXI, AHB, APB, DDR3, PCIe, NAND Flash, I²C, SPI and UART</span></dd>
+      </div>
+      <div class="hv2-fact">
+        <dt>Engagement models</dt>
+        <dd><span class="hv2-fact-num">5</span><span class="hv2-fact-note">From fixed scope to research collaboration</span></dd>
+      </div>
+      <div class="hv2-fact">
+        <dt>First reply</dt>
+        <dd><span class="hv2-fact-num">1<small> day</small></span><span class="hv2-fact-note">Within one business day, IST</span></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ─── PRACTICES · full-bleed dark band (dark in both themes) ─── -->
+<section class="hv2-band" id="practices" aria-labelledby="hv2-practices-title">
+  <div class="hv2-band-bg" aria-hidden="true">
+    <svg class="hv2-wafer" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><circle cx="500" cy="500" r="470" fill="none" stroke="#94adff" stroke-opacity=".22" stroke-width="1.5"/><circle cx="500" cy="500" r="456" fill="none" stroke="#94adff" stroke-opacity=".08"/><g fill="none" stroke="#94adff" stroke-opacity=".13"><rect x="85" y="349" width="38" height="38"/><rect x="85" y="393" width="38" height="38"/><rect x="85" y="437" width="38" height="38"/><rect x="85" y="525" width="38" height="38"/><rect x="85" y="569" width="38" height="38"/><rect x="129" y="261" width="38" height="38"/><rect x="129" y="349" width="38" height="38"/><rect x="129" y="481" width="38" height="38"/><rect x="129" y="525" width="38" height="38"/><rect x="129" y="569" width="38" height="38"/><rect x="129" y="613" width="38" height="38"/><rect x="129" y="657" width="38" height="38"/><rect x="129" y="701" width="38" height="38"/><rect x="173" y="217" width="38" height="38"/><rect x="173" y="261" width="38" height="38"/><rect x="173" y="305" width="38" height="38"/><rect x="173" y="393" width="38" height="38"/><rect x="173" y="437" width="38" height="38"/><rect x="173" y="481" width="38" height="38"/><rect x="173" y="569" width="38" height="38"/><rect x="173" y="613" width="38" height="38"/><rect x="173" y="657" width="38" height="38"/><rect x="173" y="701" width="38" height="38"/><rect x="173" y="745" width="38" height="38"/><rect x="217" y="173" width="38" height="38"/><rect x="217" y="217" width="38" height="38"/><rect x="217" y="349" width="38" height="38"/><rect x="217" y="393" width="38" height="38"/><rect x="217" y="437" width="38" height="38"/><rect x="217" y="481" width="38" height="38"/><rect x="217" y="525" width="38" height="38"/><rect x="217" y="569" width="38" height="38"/><rect x="217" y="613" width="38" height="38"/><rect x="217" y="657" width="38" height="38"/><rect x="217" y="701" width="38" height="38"/><rect x="217" y="745" width="38" height="38"/><rect x="217" y="789" width="38" height="38"/><rect x="261" y="129" width="38" height="38"/><rect x="261" y="173" width="38" height="38"/><rect x="261" y="217" width="38" height="38"/><rect x="261" y="261" width="38" height="38"/><rect x="261" y="305" width="38" height="38"/><rect x="261" y="393" width="38" height="38"/><rect x="261" y="437" width="38" height="38"/><rect x="261" y="481" width="38" height="38"/><rect x="261" y="525" width="38" height="38"/><rect x="261" y="613" width="38" height="38"/><rect x="261" y="657" width="38" height="38"/><rect x="261" y="701" width="38" height="38"/><rect x="261" y="745" width="38" height="38"/><rect x="261" y="789" width="38" height="38"/><rect x="261" y="833" width="38" height="38"/><rect x="305" y="129" width="38" height="38"/><rect x="305" y="173" width="38" height="38"/><rect x="305" y="217" width="38" height="38"/><rect x="305" y="261" width="38" height="38"/><rect x="305" y="305" width="38" height="38"/><rect x="305" y="349" width="38" height="38"/><rect x="305" y="393" width="38" height="38"/><rect x="305" y="481" width="38" height="38"/><rect x="305" y="525" width="38" height="38"/><rect x="305" y="569" width="38" height="38"/><rect x="305" y="613" width="38" height="38"/><rect x="305" y="657" width="38" height="38"/><rect x="305" y="701" width="38" height="38"/><rect x="305" y="745" width="38" height="38"/><rect x="305" y="833" width="38" height="38"/><rect x="349" y="85" width="38" height="38"/><rect x="349" y="217" width="38" height="38"/><rect x="349" y="261" width="38" height="38"/><rect x="349" y="305" width="38" height="38"/><rect x="349" y="349" width="38" height="38"/><rect x="349" y="393" width="38" height="38"/><rect x="349" y="481" width="38" height="38"/><rect x="349" y="525" width="38" height="38"/><rect x="349" y="569" width="38" height="38"/><rect x="349" y="613" width="38" height="38"/><rect x="349" y="657" width="38" height="38"/><rect x="349" y="701" width="38" height="38"/><rect x="349" y="745" width="38" height="38"/><rect x="349" y="789" width="38" height="38"/><rect x="349" y="833" width="38" height="38"/><rect x="349" y="877" width="38" height="38"/><rect x="393" y="85" width="38" height="38"/><rect x="393" y="129" width="38" height="38"/><rect x="393" y="173" width="38" height="38"/><rect x="393" y="217" width="38" height="38"/><rect x="393" y="261" width="38" height="38"/><rect x="393" y="305" width="38" height="38"/><rect x="393" y="349" width="38" height="38"/><rect x="393" y="437" width="38" height="38"/><rect x="393" y="481" width="38" height="38"/><rect x="393" y="525" width="38" height="38"/><rect x="393" y="569" width="38" height="38"/><rect x="393" y="613" width="38" height="38"/><rect x="393" y="657" width="38" height="38"/><rect x="393" y="701" width="38" height="38"/><rect x="393" y="745" width="38" height="38"/><rect x="393" y="833" width="38" height="38"/><rect x="393" y="877" width="38" height="38"/><rect x="437" y="85" width="38" height="38"/><rect x="437" y="129" width="38" height="38"/><rect x="437" y="173" width="38" height="38"/><rect x="437" y="217" width="38" height="38"/><rect x="437" y="305" width="38" height="38"/><rect x="437" y="437" width="38" height="38"/><rect x="437" y="481" width="38" height="38"/><rect x="437" y="525" width="38" height="38"/><rect x="437" y="657" width="38" height="38"/><rect x="437" y="745" width="38" height="38"/><rect x="437" y="833" width="38" height="38"/><rect x="437" y="877" width="38" height="38"/><rect x="481" y="85" width="38" height="38"/><rect x="481" y="129" width="38" height="38"/><rect x="481" y="173" width="38" height="38"/><rect x="481" y="217" width="38" height="38"/><rect x="481" y="261" width="38" height="38"/><rect x="481" y="305" width="38" height="38"/><rect x="481" y="349" width="38" height="38"/><rect x="481" y="393" width="38" height="38"/><rect x="481" y="437" width="38" height="38"/><rect x="481" y="569" width="38" height="38"/><rect x="481" y="613" width="38" height="38"/><rect x="481" y="657" width="38" height="38"/><rect x="481" y="701" width="38" height="38"/><rect x="481" y="789" width="38" height="38"/><rect x="481" y="833" width="38" height="38"/><rect x="481" y="877" width="38" height="38"/><rect x="525" y="85" width="38" height="38"/><rect x="525" y="173" width="38" height="38"/><rect x="525" y="217" width="38" height="38"/><rect x="525" y="261" width="38" height="38"/><rect x="525" y="305" width="38" height="38"/><rect x="525" y="349" width="38" height="38"/><rect x="525" y="393" width="38" height="38"/><rect x="525" y="437" width="38" height="38"/><rect x="525" y="481" width="38" height="38"/><rect x="525" y="525" width="38" height="38"/><rect x="525" y="569" width="38" height="38"/><rect x="525" y="613" width="38" height="38"/><rect x="525" y="657" width="38" height="38"/><rect x="525" y="701" width="38" height="38"/><rect x="525" y="745" width="38" height="38"/><rect x="525" y="789" width="38" height="38"/><rect x="525" y="833" width="38" height="38"/><rect x="525" y="877" width="38" height="38"/><rect x="569" y="85" width="38" height="38"/><rect x="569" y="129" width="38" height="38"/><rect x="569" y="173" width="38" height="38"/><rect x="569" y="217" width="38" height="38"/><rect x="569" y="349" width="38" height="38"/><rect x="569" y="393" width="38" height="38"/><rect x="569" y="437" width="38" height="38"/><rect x="569" y="481" width="38" height="38"/><rect x="569" y="525" width="38" height="38"/><rect x="569" y="569" width="38" height="38"/><rect x="569" y="613" width="38" height="38"/><rect x="569" y="657" width="38" height="38"/><rect x="569" y="701" width="38" height="38"/><rect x="569" y="745" width="38" height="38"/><rect x="569" y="789" width="38" height="38"/><rect x="569" y="833" width="38" height="38"/><rect x="569" y="877" width="38" height="38"/><rect x="613" y="85" width="38" height="38"/><rect x="613" y="129" width="38" height="38"/><rect x="613" y="173" width="38" height="38"/><rect x="613" y="217" width="38" height="38"/><rect x="613" y="261" width="38" height="38"/><rect x="613" y="305" width="38" height="38"/><rect x="613" y="393" width="38" height="38"/><rect x="613" y="437" width="38" height="38"/><rect x="613" y="481" width="38" height="38"/><rect x="613" y="525" width="38" height="38"/><rect x="613" y="569" width="38" height="38"/><rect x="613" y="613" width="38" height="38"/><rect x="613" y="657" width="38" height="38"/><rect x="613" y="701" width="38" height="38"/><rect x="613" y="745" width="38" height="38"/><rect x="613" y="789" width="38" height="38"/><rect x="613" y="833" width="38" height="38"/><rect x="613" y="877" width="38" height="38"/><rect x="657" y="129" width="38" height="38"/><rect x="657" y="173" width="38" height="38"/><rect x="657" y="217" width="38" height="38"/><rect x="657" y="261" width="38" height="38"/><rect x="657" y="305" width="38" height="38"/><rect x="657" y="349" width="38" height="38"/><rect x="657" y="393" width="38" height="38"/><rect x="657" y="437" width="38" height="38"/><rect x="657" y="481" width="38" height="38"/><rect x="657" y="525" width="38" height="38"/><rect x="657" y="569" width="38" height="38"/><rect x="657" y="613" width="38" height="38"/><rect x="657" y="657" width="38" height="38"/><rect x="657" y="701" width="38" height="38"/><rect x="657" y="789" width="38" height="38"/><rect x="657" y="833" width="38" height="38"/><rect x="701" y="129" width="38" height="38"/><rect x="701" y="173" width="38" height="38"/><rect x="701" y="217" width="38" height="38"/><rect x="701" y="261" width="38" height="38"/><rect x="701" y="305" width="38" height="38"/><rect x="701" y="349" width="38" height="38"/><rect x="701" y="393" width="38" height="38"/><rect x="701" y="437" width="38" height="38"/><rect x="701" y="481" width="38" height="38"/><rect x="701" y="525" width="38" height="38"/><rect x="701" y="569" width="38" height="38"/><rect x="701" y="613" width="38" height="38"/><rect x="701" y="657" width="38" height="38"/><rect x="701" y="701" width="38" height="38"/><rect x="701" y="745" width="38" height="38"/><rect x="701" y="789" width="38" height="38"/><rect x="701" y="833" width="38" height="38"/><rect x="745" y="173" width="38" height="38"/><rect x="745" y="217" width="38" height="38"/><rect x="745" y="261" width="38" height="38"/><rect x="745" y="305" width="38" height="38"/><rect x="745" y="349" width="38" height="38"/><rect x="745" y="393" width="38" height="38"/><rect x="745" y="481" width="38" height="38"/><rect x="745" y="525" width="38" height="38"/><rect x="745" y="613" width="38" height="38"/><rect x="745" y="657" width="38" height="38"/><rect x="745" y="701" width="38" height="38"/><rect x="745" y="745" width="38" height="38"/><rect x="745" y="789" width="38" height="38"/><rect x="789" y="217" width="38" height="38"/><rect x="789" y="261" width="38" height="38"/><rect x="789" y="305" width="38" height="38"/><rect x="789" y="349" width="38" height="38"/><rect x="789" y="437" width="38" height="38"/><rect x="789" y="481" width="38" height="38"/><rect x="789" y="525" width="38" height="38"/><rect x="789" y="569" width="38" height="38"/><rect x="789" y="613" width="38" height="38"/><rect x="789" y="657" width="38" height="38"/><rect x="789" y="701" width="38" height="38"/><rect x="789" y="745" width="38" height="38"/><rect x="833" y="261" width="38" height="38"/><rect x="833" y="305" width="38" height="38"/><rect x="833" y="349" width="38" height="38"/><rect x="833" y="393" width="38" height="38"/><rect x="833" y="437" width="38" height="38"/><rect x="833" y="481" width="38" height="38"/><rect x="833" y="525" width="38" height="38"/><rect x="833" y="569" width="38" height="38"/><rect x="833" y="613" width="38" height="38"/><rect x="833" y="657" width="38" height="38"/><rect x="833" y="701" width="38" height="38"/><rect x="877" y="349" width="38" height="38"/><rect x="877" y="393" width="38" height="38"/><rect x="877" y="437" width="38" height="38"/><rect x="877" y="481" width="38" height="38"/><rect x="877" y="525" width="38" height="38"/><rect x="877" y="569" width="38" height="38"/><rect x="877" y="613" width="38" height="38"/></g><g fill="#91abff" fill-opacity=".13" stroke="#92acff" stroke-opacity=".38"><rect x="85" y="481" width="38" height="38"/><rect x="85" y="613" width="38" height="38"/><rect x="129" y="305" width="38" height="38"/><rect x="129" y="393" width="38" height="38"/><rect x="129" y="437" width="38" height="38"/><rect x="173" y="349" width="38" height="38"/><rect x="173" y="525" width="38" height="38"/><rect x="217" y="261" width="38" height="38"/><rect x="217" y="305" width="38" height="38"/><rect x="261" y="349" width="38" height="38"/><rect x="261" y="569" width="38" height="38"/><rect x="305" y="437" width="38" height="38"/><rect x="305" y="789" width="38" height="38"/><rect x="349" y="129" width="38" height="38"/><rect x="349" y="173" width="38" height="38"/><rect x="349" y="437" width="38" height="38"/><rect x="393" y="393" width="38" height="38"/><rect x="393" y="789" width="38" height="38"/><rect x="437" y="261" width="38" height="38"/><rect x="437" y="349" width="38" height="38"/><rect x="437" y="393" width="38" height="38"/><rect x="437" y="569" width="38" height="38"/><rect x="437" y="613" width="38" height="38"/><rect x="437" y="701" width="38" height="38"/><rect x="437" y="789" width="38" height="38"/><rect x="481" y="481" width="38" height="38"/><rect x="481" y="525" width="38" height="38"/><rect x="481" y="745" width="38" height="38"/><rect x="525" y="129" width="38" height="38"/><rect x="569" y="261" width="38" height="38"/><rect x="569" y="305" width="38" height="38"/><rect x="613" y="349" width="38" height="38"/><rect x="657" y="745" width="38" height="38"/><rect x="745" y="437" width="38" height="38"/><rect x="745" y="569" width="38" height="38"/><rect x="789" y="393" width="38" height="38"/></g><path d="M488 969 A12 12 0 0 1 512 969" fill="none" stroke="#94adff" stroke-opacity=".35" stroke-width="1.5"/></svg>
+  </div>
+  <div class="container hv2-railed">
+    <div class="hv2-band-head reveal">
+      <div>
+        <p class="hv2-net"><span class="hv2-via" aria-hidden="true"></span>Our services &amp; focus areas</p>
+        <h2 class="hv2-h2" id="hv2-practices-title">Silicon, quantum and intelligent systems. <span class="hv2-mute">One practical way of working.</span></h2>
+      </div>
+      <p class="hv2-band-lede">We support semiconductor and technology companies throughout the product development lifecycle — from IP and SoC design and design verification to FPGA development, validation and post-silicon bring-up. We also engage in quantum technology initiatives through technical collaboration and partnerships. The same practical approach applies across semiconductors, quantum technologies and intelligent systems.</p>
+    </div>
+
+    <div class="hv2-practices">
+      <article class="hv2-practice reveal">
+        <div class="hv2-practice-head">
+          <span class="hv2-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-vlsi"/></svg></span>
+          <p class="hv2-practice-tag">Focus area · VLSI</p>
+        </div>
+        <h3>VLSI &amp; semiconductor engineering</h3>
+        <p class="hv2-practice-text">IP and SoC design, design verification, FPGA development and validation, and post-silicon validation and bring-up — applied with structured methodologies and systematic validation to help customers develop reliable semiconductor products.</p>
+        <figure class="hv2-specimen">
+          <svg viewBox="0 0 460 172" aria-hidden="true" focusable="false"><text class="hv2-spec-lbl" x="0" y="22">ACLK</text><path d="M92 18H452" stroke="#9eb0e9" stroke-opacity=".12"/><text class="hv2-spec-lbl" x="0" y="58">AWVALID</text><path d="M92 54H452" stroke="#9eb0e9" stroke-opacity=".12"/><text class="hv2-spec-lbl" x="0" y="94">AWREADY</text><path d="M92 90H452" stroke="#9eb0e9" stroke-opacity=".12"/><text class="hv2-spec-lbl" x="0" y="130">WDATA</text><path d="M92 126H452" stroke="#9eb0e9" stroke-opacity=".12"/><text class="hv2-spec-lbl" x="0" y="164">BRESP</text><path d="M92 160H452" stroke="#9eb0e9" stroke-opacity=".12"/><path d="M92 26 V10 H112 V26 H132 V10 H152 V26 H172 V10 H192 V26 H212 V10 H232 V26 H252 V10 H272 V26 H292 V10 H312 V26 H332 V10 H352 V26 H372 V10 H392 V26 H412 V10 H432 V26 H452" stroke="#7d9cc9" stroke-width="1.4" fill="none"/><path d="M212 4V104" stroke="#d9a866" stroke-width="1.2" stroke-dasharray="3 3"/><path d="M92 62H136V46H216V62H452" stroke="#a0b6ff" stroke-width="1.8" fill="none"/><path d="M92 98H176V82H216V98H452" stroke="#a0b6ff" stroke-width="1.8" fill="none"/><circle cx="212" cy="46" r="3" fill="#d9a866"/><circle cx="212" cy="82" r="3" fill="#d9a866"/><path d="M92 126H216M376 126H452" stroke="#9eb0e9" stroke-opacity=".7" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M216 126L221 118H251L256 126L251 134H221Z" fill="#a0b6ff" fill-opacity=".12" stroke="#bdccff" stroke-width="1.3"/><text class="hv2-spec-val" x="236.0" y="130" text-anchor="middle">D0</text><path d="M256 126L261 118H291L296 126L291 134H261Z" fill="#a0b6ff" fill-opacity=".12" stroke="#bdccff" stroke-width="1.3"/><text class="hv2-spec-val" x="276.0" y="130" text-anchor="middle">D1</text><path d="M296 126L301 118H331L336 126L331 134H301Z" fill="#a0b6ff" fill-opacity=".12" stroke="#bdccff" stroke-width="1.3"/><text class="hv2-spec-val" x="316.0" y="130" text-anchor="middle">D2</text><path d="M336 126L341 118H371L376 126L371 134H341Z" fill="#a0b6ff" fill-opacity=".12" stroke="#bdccff" stroke-width="1.3"/><text class="hv2-spec-val" x="356.0" y="130" text-anchor="middle">D3</text><path d="M92 160H392" stroke="#9eb0e9" stroke-opacity=".7" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M392 160L397 152H452M392 160L397 168H452" fill="none" stroke="#5fe39a" stroke-width="1.3"/><rect x="397" y="152" width="55" height="16" fill="#5fe39a" fill-opacity=".10"/><text class="hv2-spec-val" x="424" y="164" text-anchor="middle">OKAY</text></svg>
+          <figcaption>Example · AXI write: address handshake, 4-beat burst, OKAY response</figcaption>
+        </figure>
+        <ul class="hv2-services">
+          <li><strong>IP &amp; SoC design</strong><span>RISC-V processors, AI/ML accelerators, Network-on-Chip (NoC) and coherency</span></li>
+          <li><strong>Design verification</strong><span>Complex SoC verification with SystemVerilog, UVM and SVA</span></li>
+          <li><strong>FPGA validation &amp; bring-up</strong><span>FPGA development and validation, post-silicon validation and bring-up</span></li>
+        </ul>
+        <a class="hv2-link" href="solutions.html#vlsi">VLSI capabilities <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="hv2-practice reveal" data-reveal-delay="1">
+        <div class="hv2-practice-head">
+          <span class="hv2-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-quantum"/></svg></span>
+          <p class="hv2-practice-tag">Focus area · Quantum</p>
+        </div>
+        <h3>Quantum technologies</h3>
+        <p class="hv2-practice-text">We work with customers and partners across quantum computing, quantum communication, quantum machine learning and quantum semiconductors — contributing, through engineering collaboration and technical development, to initiatives advancing quantum technologies and their applications.</p>
+        <figure class="hv2-specimen">
+          <svg viewBox="0 0 460 172" aria-hidden="true" focusable="false"><text class="hv2-spec-lbl" x="0" y="40">q0</text><path d="M36 36H340" stroke="#9eb0e9" stroke-opacity=".75" stroke-width="1.3"/><path d="M372 34H452M372 38H452" stroke="#9eb0e9" stroke-opacity=".55" stroke-width="1"/><text class="hv2-spec-lbl" x="0" y="90">q1</text><path d="M36 86H340" stroke="#9eb0e9" stroke-opacity=".75" stroke-width="1.3"/><path d="M372 84H452M372 88H452" stroke="#9eb0e9" stroke-opacity=".55" stroke-width="1"/><text class="hv2-spec-lbl" x="0" y="140">q2</text><path d="M36 136H340" stroke="#9eb0e9" stroke-opacity=".75" stroke-width="1.3"/><path d="M372 134H452M372 138H452" stroke="#9eb0e9" stroke-opacity=".55" stroke-width="1"/><rect x="78" y="22" width="30" height="28" rx="3" fill="#0d2147" stroke="#a0b6ff" stroke-width="1.5"/><text class="hv2-spec-gate" x="93" y="41" text-anchor="middle">H</text><path d="M166 36V98" stroke="#a0b6ff" stroke-width="1.5"/><circle cx="166" cy="36" r="5" fill="#a0b6ff"/><circle cx="166" cy="86" r="12" fill="#0d2147" stroke="#a0b6ff" stroke-width="1.5"/><path d="M154 86H178M166 74V98" stroke="#a0b6ff" stroke-width="1.5"/><path d="M240 86V148" stroke="#a0b6ff" stroke-width="1.5"/><circle cx="240" cy="86" r="5" fill="#a0b6ff"/><circle cx="240" cy="136" r="12" fill="#0d2147" stroke="#a0b6ff" stroke-width="1.5"/><path d="M228 136H252M240 124V148" stroke="#a0b6ff" stroke-width="1.5"/><path d="M296 16V156" stroke="#9eb0e9" stroke-opacity=".45" stroke-dasharray="3 4"/><rect x="340" y="22" width="32" height="28" rx="3" fill="#0d2147" stroke="#d9a866" stroke-width="1.4"/><path d="M346 43A10 10 0 0 1 366 43M356 43L364 29" fill="none" stroke="#d9a866" stroke-width="1.4"/><rect x="340" y="72" width="32" height="28" rx="3" fill="#0d2147" stroke="#d9a866" stroke-width="1.4"/><path d="M346 93A10 10 0 0 1 366 93M356 93L364 79" fill="none" stroke="#d9a866" stroke-width="1.4"/><rect x="340" y="122" width="32" height="28" rx="3" fill="#0d2147" stroke="#d9a866" stroke-width="1.4"/><path d="M346 143A10 10 0 0 1 366 143M356 143L364 129" fill="none" stroke="#d9a866" stroke-width="1.4"/></svg>
+          <figcaption>Example · 3-qubit GHZ circuit: H, two CNOTs, measure</figcaption>
+        </figure>
+        <ul class="hv2-services">
+          <li><strong>Quantum computing &amp; ML</strong><span>Quantum algorithms, quantum machine learning and simulation</span></li>
+          <li><strong>Quantum communication</strong><span>QKD protocols, QRNG and post-quantum cryptography</span></li>
+          <li><strong>Quantum semiconductors</strong><span>Quantum processor architecture, qubit connectivity and quantum VLSI</span></li>
+        </ul>
+        <a class="hv2-link" href="solutions.html#quantum">Quantum capabilities <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+
+    <article class="hv2-training hv2-nextgen reveal">
+      <div class="hv2-training-main">
+        <div class="hv2-practice-head">
+          <span class="hv2-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-nextgen"/></svg></span>
+          <p class="hv2-practice-tag">Focus area · Next-gen</p>
+        </div>
+        <h3>Next-generation computing &amp; innovation</h3>
+        <p class="hv2-practice-text">We explore emerging computing technologies and develop internal IP to address evolving industry needs.</p>
+      </div>
+      <ul class="hv2-tracks">
+        <li class="hv2-track">
+          <svg class="hv2-track-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-algorithms"/></svg>
+          <div><strong>Investigation &amp; experimentation</strong><span>Technical investigation and practical experimentation with emerging computing technologies</span></div>
+        </li>
+        <li class="hv2-track">
+          <svg class="hv2-track-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nextgen"/></svg>
+          <div><strong>Reusable capabilities &amp; internal IP</strong><span>Collaborative innovation and continuous learning to address emerging industry challenges</span></div>
+        </li>
+      </ul>
+      <a class="hv2-link" href="contact.html">Collaborate with us <span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="hv2-training hv2-nextgen reveal">
+      <div class="hv2-training-main">
+        <div class="hv2-practice-head">
+          <span class="hv2-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-algorithms"/></svg></span>
+          <p class="hv2-practice-tag">Focus area · AI/ML</p>
+        </div>
+        <h3>AI/ML &amp; data engineering</h3>
+        <p class="hv2-practice-text">Applied AI and data work — from LLM applications and AI agents to cloud data pipelines — together with the accelerator hardware that runs them.</p>
+      </div>
+      <ul class="hv2-tracks">
+        <li class="hv2-track">
+          <svg class="hv2-track-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-vlsi"/></svg>
+          <div><strong>AI/ML engineering</strong><span>Accelerator architecture, workloads shaped by the hardware beneath them, and verification of intelligent systems</span></div>
+        </li>
+        <li class="hv2-track">
+          <svg class="hv2-track-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-data"/></svg>
+          <div><strong>Cloud data engineering</strong><span>Azure Data Factory, Databricks and Snowflake</span></div>
+        </li>
+      </ul>
+      <a class="hv2-link" href="solutions.html#ai-ml">AI/ML engineering <span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="hv2-training reveal">
+      <div class="hv2-training-main">
+        <div class="hv2-practice-head">
+          <span class="hv2-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-training"/></svg></span>
+          <p class="hv2-practice-tag">Training</p>
+        </div>
+        <h3>Professional training</h3>
+        <p class="hv2-practice-text">Hands-on programmes in quantum technologies, AI and data engineering, built around real use cases and capstone projects.</p>
+      </div>
+      <ul class="hv2-tracks hv2-tracks--3">
+        <li class="hv2-track">
+          <svg class="hv2-track-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-quantum"/></svg>
+          <div><strong>Quantum technologies</strong><span>Quantum computing, communication, QML and quantum semiconductors</span></div>
+        </li>
+        <li class="hv2-track">
+          <svg class="hv2-track-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-algorithms"/></svg>
+          <div><strong>Agentic AI, Generative AI &amp; ML</strong><span>LLMs, RAG, LangChain, LangGraph, CrewAI, MLOps</span></div>
+        </li>
+        <li class="hv2-track">
+          <svg class="hv2-track-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-data"/></svg>
+          <div><strong>Data Engineering</strong><span>Azure Data Factory, Databricks, PySpark, Snowflake</span></div>
+        </li>
+      </ul>
+      <a class="hv2-link" href="training.html">View programmes <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
+</section>
+
+<!-- ─── HOW WE WORK · the process drawn as a signal path ─── -->
+<section class="hv2-sec hv2-process" id="process" aria-labelledby="hv2-process-title">
+  <div class="container hv2-railed">
+    <div class="hv2-process-head reveal">
+      <p class="hv2-net"><span class="hv2-via" aria-hidden="true"></span>Our approach</p>
+      <h2 class="hv2-h2" id="hv2-process-title">Capable teams. Clear objectives. <span class="hv2-mute">Shared ownership.</span></h2>
+      <p class="hv2-lede"><strong>Hard technical problems, practical engineering, results you can rely on.</strong> We believe successful engineering begins with capable teams, clear objectives and shared ownership. Through proven practices, adaptable team structures, continuous learning and close customer engagement, we align our work with project goals and deliver dependable outcomes.</p>
+    </div>
+    <div class="hv2-path-wrap reveal">
+      <span class="hv2-term hv2-term--in" aria-hidden="true">Spec</span>
+      <span class="hv2-term hv2-term--out" aria-hidden="true">Silicon</span>
+      <ol class="hv2-path">
+        <li class="hv2-step">
+          <span class="hv2-step-via" aria-hidden="true"></span>
+          <span class="hv2-step-num" aria-hidden="true">01</span>
+          <h3>Scope</h3>
+          <p>We read the spec with you, agree milestones and choose the engagement model.</p>
+        </li>
+        <li class="hv2-step">
+          <span class="hv2-step-via" aria-hidden="true"></span>
+          <span class="hv2-step-num" aria-hidden="true">02</span>
+          <h3>Plan</h3>
+          <p>A written design or verification plan: features, coverage model and sign-off criteria.</p>
+        </li>
+        <li class="hv2-step">
+          <span class="hv2-step-via" aria-hidden="true"></span>
+          <span class="hv2-step-num" aria-hidden="true">03</span>
+          <h3>Build</h3>
+          <p>RTL, testbenches and UVM environments — or quantum circuits and proofs of concept.</p>
+        </li>
+        <li class="hv2-step">
+          <span class="hv2-step-via" aria-hidden="true"></span>
+          <span class="hv2-step-num" aria-hidden="true">04</span>
+          <h3>Verify</h3>
+          <p>Constrained-random regressions, SVA assertions, gate-level simulation and coverage closure.</p>
+        </li>
+        <li class="hv2-step">
+          <span class="hv2-step-via" aria-hidden="true"></span>
+          <span class="hv2-step-num" aria-hidden="true">05</span>
+          <h3>Bring up</h3>
+          <p>FPGA prototyping, Palladium emulation and post-silicon validation, then a documented handover.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUR VISION · statement, client vision text, reasons ─── -->
+<section class="hv2-sec hv2-why" id="why" aria-labelledby="hv2-why-title">
+  <div class="container hv2-railed">
+    <div class="reveal">
+      <p class="hv2-net"><span class="hv2-via" aria-hidden="true"></span>Our vision</p>
+      <h2 class="hv2-statement" id="hv2-why-title">Engineering that creates <span class="hv2-mute">lasting value.</span></h2>
+      <p class="hv2-lede hv2-vision-text">We aspire to build an engineering organization that brings together semiconductor expertise, strong engineering teams and active collaboration across quantum technologies and next-generation computing. Through customer-focused engineering services, technology partnerships and internal IP development, we aim to contribute to the advancement of the technology ecosystem and create lasting value for our customers, partners and engineers.</p>
+    </div>
+
+    <div class="hv2-why-grid">
+      <ul class="hv2-reasons reveal">
+        <li>
+          <svg class="hv2-reason-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-verification"/></svg>
+          <div>
+            <h3>Semiconductor expertise</h3>
+            <p>IP and SoC design, design verification, FPGA validation and post-silicon bring-up, applied with structured methodologies and systematic validation.</p>
+          </div>
+        </li>
+        <li>
+          <svg class="hv2-reason-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-vlsi"/></svg>
+          <div>
+            <h3>Strong engineering teams</h3>
+            <p>Capable teams, adaptable team structures and continuous learning, aligned with project goals through close customer engagement.</p>
+          </div>
+        </li>
+        <li>
+          <svg class="hv2-reason-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-quantum"/></svg>
+          <div>
+            <h3>Active collaboration</h3>
+            <p>Technology partnerships and internal IP development across quantum technologies and next-generation computing.</p>
+          </div>
+        </li>
+      </ul>
+
+      <figure class="hv2-pinout reveal" data-reveal-delay="1">
+        <div class="hv2-pinout-grid">
+          <ul class="hv2-pins hv2-pins--top" aria-label="Bus and interconnect protocols">
+            <li>AXI</li><li>AHB</li><li>APB</li><li>PCIe</li><li>DDR3</li>
+          </ul>
+          <ul class="hv2-pins hv2-pins--left" aria-label="Verification languages and methodology">
+            <li>SystemVerilog</li><li>UVM</li><li>SVA</li>
+          </ul>
+          <div class="hv2-chip">
+            <span class="hv2-chip-big">DV</span>
+            <span class="hv2-chip-sub">Protocols &amp; tooling</span>
+          </div>
+          <ul class="hv2-pins hv2-pins--right" aria-label="Verification platforms and sign-off">
+            <li>Palladium</li><li>Gate-level sim</li><li>Coverage closure</li>
+          </ul>
+          <ul class="hv2-pins hv2-pins--bot" aria-label="Memory and peripheral protocols">
+            <li>NAND Flash</li><li>I²C</li><li>SPI</li><li>UART</li>
+          </ul>
+        </div>
+        <figcaption><b>Fig. 2</b> Protocols (top and bottom pins) and verification tooling (side pins) our engineers work with.</figcaption>
+      </figure>
+    </div>
+
+    <!-- PLACEHOLDER: client logos. Domains below come from the client's Solutions content (Domain Expertise); add approved client names/logos here when available. Do not invent names. -->
+    <div class="hv2-clients">
+      <p class="hv2-clients-label">Domains</p>
+      <ul class="hv2-domains" aria-label="Domains we work in">
+        <li>ARM &amp; AMD processors</li><li>SoCs &amp; chipsets</li><li>Multimedia</li><li>Networking &amp; WLAN</li><li>Memory controllers</li><li>Network-on-Chip</li><li>RISC-V</li><li>AI/ML accelerators</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CAPABILITIES · datasheet table ─── -->
+<section class="hv2-sec hv2-caps" id="capabilities" aria-labelledby="hv2-caps-title">
+  <div class="container hv2-railed">
+    <div class="hv2-caps-head reveal">
+      <div>
+        <p class="hv2-net"><span class="hv2-via" aria-hidden="true"></span>Capabilities</p>
+        <h2 class="hv2-h2" id="hv2-caps-title">Capabilities at a glance. <span class="hv2-mute">The short version.</span></h2>
+      </div>
+      <p class="hv2-lede">The languages, protocols and platforms behind both practices — what our engineers bring to every engagement.</p>
+    </div>
+
+    <div class="hv2-caps-table reveal" data-reveal-delay="1">
+      <table class="hv2-spec">
+        <caption><span class="hv2-spec-n">Table 1</span> Engineering capabilities by area</caption>
+        <thead>
+          <tr><th scope="col" class="hv2-c-ref">Ref.</th><th scope="col" class="hv2-c-area">Area</th><th scope="col">Coverage</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="hv2-c-ref">V·01</td><th scope="row" class="hv2-c-area">Verification</th>
+            <td><ul class="hv2-inline"><li>SystemVerilog</li><li>UVM</li><li>OVM</li><li>Verilog</li><li>C/C++</li><li>SVA</li><li>Assertion-based</li><li>Metric-driven</li><li>Coverage-driven</li><li>Gate-level simulation</li><li>Unit-delay &amp; SDF timing</li><li>DPI integration</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">V·02</td><th scope="row" class="hv2-c-area">Bus &amp; memory protocols</th>
+            <td><ul class="hv2-inline"><li>AXI</li><li>AHB</li><li>APB</li><li>DDR3</li><li>PCIe</li><li>NAND Flash</li><li>I²C</li><li>SPI</li><li>UART</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">V·03</td><th scope="row" class="hv2-c-area">Design domains</th>
+            <td><ul class="hv2-inline"><li>ARM &amp; AMD processor architectures</li><li>SoC &amp; chipsets</li><li>RISC-V processors</li><li>AI/ML accelerators</li><li>Network-on-Chip</li><li>Cache coherency</li><li>Multimedia</li><li>Networking &amp; WLAN</li><li>Memory controllers</li><li>High-speed interfaces</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">V·04</td><th scope="row" class="hv2-c-area">Platforms &amp; bring-up</th>
+            <td><ul class="hv2-inline"><li>Cadence Palladium</li><li>FPGA prototyping</li><li>Hardware validation</li><li>Post-silicon bring-up</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">Q·01</td><th scope="row" class="hv2-c-area">Quantum</th>
+            <td><ul class="hv2-inline"><li>Quantum computing</li><li>Quantum cryptography</li><li>QKD</li><li>QRNG</li><li>Quantum error correction</li><li>Entanglement purification</li><li>Quantum machine learning</li><li>Hybrid quantum-classical</li><li>Post-quantum cryptography</li><li>Quantum-inspired optimization</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">Q·02</td><th scope="row" class="hv2-c-area">Quantum hardware</th>
+            <td><ul class="hv2-inline"><li>Quantum processor architecture</li><li>Superconducting concepts</li><li>Qubit connectivity</li><li>Quantum chip design concepts</li><li>Quantum VLSI</li><li>Semiconductor device research</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">Q·03</td><th scope="row" class="hv2-c-area">Development &amp; simulation</th>
+            <td><ul class="hv2-inline"><li>Simulators &amp; real quantum systems</li><li>Circuit optimization</li><li>Noise modelling</li><li>State fidelity analysis</li><li>Performance benchmarking</li><li>Resource estimation</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">A·01</td><th scope="row" class="hv2-c-area">AI/ML engineering</th>
+            <td><ul class="hv2-inline"><li>AI/ML accelerator architecture</li><li>SoC integration</li><li>Hardware-aware AI/ML</li><li>Memory systems</li><li>Data movement</li><li>Verification for intelligent systems</li></ul></td></tr>
+          <tr><td class="hv2-c-ref">T·01</td><th scope="row" class="hv2-c-area">Training</th>
+            <td><ul class="hv2-inline"><li>Quantum computing</li><li>Quantum communication</li><li>Quantum machine learning</li><li>Quantum semiconductors</li><li>Agentic &amp; Generative AI</li><li>Machine learning</li><li>Azure Data Factory</li><li>Databricks</li><li>Snowflake</li></ul></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ENGAGEMENT MODELS · sticky intro + model list ─── -->
+<section class="hv2-sec hv2-engage" id="engagement" aria-labelledby="hv2-engage-title">
+  <div class="container hv2-railed">
+    <div class="hv2-engage-grid">
+      <div class="hv2-engage-head reveal">
+        <p class="hv2-net"><span class="hv2-via" aria-hidden="true"></span>Engagement models</p>
+        <h2 class="hv2-h2" id="hv2-engage-title">Five ways to engage. <span class="hv2-mute">Pick the shape that fits the work.</span></h2>
+        <p class="hv2-lede">Our engagement models are tailored to project requirements, delivery timelines and customer needs, enabling flexible and cost-effective access to engineering expertise. Not sure which one fits? Describe the work and we’ll recommend one.</p>
+        <a class="hv2-link hv2-link--ink" href="contact.html">Discuss your project <span aria-hidden="true">→</span></a>
+      </div>
+
+      <ul class="hv2-models reveal" data-reveal-delay="1">
+        <li class="hv2-model">
+          <h3>Fixed scope</h3>
+          <p>Milestone-based. The spec is agreed up front and we commit to the deliverables for each milestone.</p>
+          <p class="hv2-model-fit"><span>Best for</span>Defined IP, verification or bring-up milestones</p>
+        </li>
+        <li class="hv2-model">
+          <h3>Fixed price</h3>
+          <p>A turnkey deliverable — such as verification IP or a test suite — at a quoted price.</p>
+          <p class="hv2-model-fit"><span>Best for</span>Turnkey work against a stable spec</p>
+        </li>
+        <li class="hv2-model">
+          <h3>Time &amp; materials</h3>
+          <p>Engineering on demand, with weekly progress updates and monthly invoicing.</p>
+          <p class="hv2-model-fit"><span>Best for</span>Evolving scope and exploratory work</p>
+        </li>
+        <li class="hv2-model">
+          <h3>Staff augmentation</h3>
+          <p>Senior engineers embedded in your team — your tools, your repository, your stand-up.</p>
+          <p class="hv2-model-fit"><span>Best for</span>Scaling an in-house design or DV team</p>
+        </li>
+        <li class="hv2-model">
+          <h3>Research collaboration</h3>
+          <p>Joint research, proofs of concept and publications in QKD, quantum error correction and post-quantum cryptography.</p>
+          <p class="hv2-model-fit"><span>Best for</span>Universities, labs and R&amp;D groups</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA · the signal path terminates here ─── -->
+<section class="hv2-cta-sec" aria-labelledby="hv2-cta-title">
+  <div class="container hv2-railed">
+    <div class="hv2-cta reveal">
+      <span class="hv2-cta-pads" aria-hidden="true"></span>
+      <div class="hv2-cta-body">
+        <p class="hv2-net hv2-net--inline"><span class="hv2-via" aria-hidden="true"></span>Contact</p>
+        <h2 id="hv2-cta-title">Bring us the spec.</h2>
+        <p>Open a project, scope a verification effort or hire a verification engineer. We reply within one business day, IST.</p>
+      </div>
+      <div class="hv2-cta-side">
+        <div class="hv2-cta-actions">
+          <a class="btn-cta" href="contact.html">Start a project <span aria-hidden="true">→</span></a>
+          <a class="btn-cta-outline" href="mailto:sales@qubitsemisolutions.com">Email us</a>
+        </div>
+        <address class="hv2-cta-addr">
+          3H, Dwaraka Pride, Plot No. 4/1, Survey No. 64<br>Huda Techno Enclave, Madhapur, HITEC City<br>Hyderabad, Telangana 500081<br>
+          <a href="mailto:sales@qubitsemisolutions.com">sales@qubitsemisolutions.com</a><br>
+          <a href="mailto:careers@qubitsemisolutions.com">careers@qubitsemisolutions.com</a>
+        </address>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footprint" role="contentinfo">
+  <div class="container">
+    <div class="footprint-grid">
+
+      <div class="footprint-brand">
+        <div class="brand-name">QubitSemi Solutions</div>
+        <p>Engineering-driven semiconductor and quantum technology services from Hyderabad. IP to silicon, end-to-end.</p>
+      </div>
+
+      <div>
+        <h2>// PAGES</h2>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>// SOLUTIONS</h2>
+        <ul>
+          <li><a href="solutions.html#vlsi">VLSI · Verification</a></li>
+          <li><a href="solutions.html#vlsi">FPGA · Bring-up</a></li>
+          <li><a href="solutions.html#quantum">Quantum · QKD</a></li>
+          <li><a href="solutions.html#quantum">Quantum · Post-quantum</a></li><li><a href="solutions.html#ai-ml">AI/ML · Engineering</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>// REACH US</h2>
+        <ul>
+          <li>3H, Dwaraka Pride</li>
+          <li>Huda Techno Enclave, Madhapur</li>
+          <li>HITEC City, Hyderabad 500081</li>
+          <li><a href="mailto:sales@qubitsemisolutions.com">sales@qubitsemisolutions.com</a></li><li><a href="mailto:careers@qubitsemisolutions.com">careers@qubitsemisolutions.com</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="colophon">
+      <div class="colophon-cell"><span class="ck">// PRACTICES</span><span class="cv">VLSI · Quantum · Training</span></div>
+      <div class="colophon-cell"><span class="ck">// HQ</span><span class="cv">HITEC City, Hyderabad</span></div>
+      <div class="colophon-cell"><span class="ck">// REPLY</span><span class="cv">1 business day · IST</span></div>
+      <div class="colophon-sig">
+        <span class="sig-k">MAIL</span><a class="sig-v" href="mailto:sales@qubitsemisolutions.com">sales@qubitsemisolutions.com</a>
+      </div>
+    </div>
+
+    <div class="footprint-base">
+      <!-- PLACEHOLDER: add the company's registered CIN here once confirmed (the previous value was a dummy). -->
+      <span>QubitSemi Solutions Private Limited · Hyderabad, India</span>
+      <span>© <span data-year>2026</span> · All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" data-sticky-cta>
+  <span class="sticky-cta-label">VLSI · Quantum · Training</span>
+  <a href="contact.html" class="btn-cta">Get in Touch <span aria-hidden="true">→</span></a>
+</div>
+
+<svg class="hv2-sprite" style="position:absolute;width:0;height:0;overflow:hidden" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-vlsi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="4"  y1="2"  x2="4"  y2="4"/><line x1="8"  y1="2"  x2="8"  y2="4"/><line x1="12" y1="2"  x2="12" y2="4"/><line x1="16" y1="2"  x2="16" y2="4"/><line x1="20" y1="2"  x2="20" y2="4"/><line x1="4"  y1="20" x2="4"  y2="22"/><line x1="8"  y1="20" x2="8"  y2="22"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="16" y1="20" x2="16" y2="22"/><line x1="20" y1="20" x2="20" y2="22"/><line x1="2"  y1="8"  x2="4"  y2="8"/><line x1="2"  y1="12" x2="4"  y2="12"/><line x1="2"  y1="16" x2="4"  y2="16"/><line x1="20" y1="8"  x2="22" y2="8"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="20" y1="16" x2="22" y2="16"/><rect x="4" y="4" width="16" height="16" rx="0.5"/><line x1="4"  y1="10" x2="20" y2="10"/><line x1="4"  y1="14" x2="20" y2="14"/><line x1="10" y1="4"  x2="10" y2="20"/><line x1="14" y1="4"  x2="14" y2="20"/><rect x="10" y="10" width="4" height="4" fill="currentColor" fill-opacity="0.45" stroke="none"/></symbol><symbol id="i-nextgen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,3 21,8 21,16 12,21 3,16 3,8"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="8" x2="21" y2="16"/><line x1="21" y1="8" x2="3" y2="16"/><circle cx="12" cy="12" r="1.4" fill="currentColor" fill-opacity="0.5" stroke="none"/></symbol><symbol id="i-quantum" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><ellipse cx="12" cy="12" rx="8" ry="3.5"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="12" cy="12" r="1.5" fill="currentColor" fill-opacity="0.7" stroke="none"/></symbol><symbol id="i-verification" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="0.5"/><line x1="3"  y1="9"  x2="5"  y2="9"/><line x1="3"  y1="15" x2="5"  y2="15"/><line x1="19" y1="9"  x2="21" y2="9"/><line x1="19" y1="15" x2="21" y2="15"/><path d="M5 12 L7 12 L8.5 7 L10 17 L11.5 9 L13 14 L15 12 L19 12"/><circle cx="10" cy="17" r="0.9" fill="currentColor" stroke="none"/></symbol><symbol id="i-training" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,4 22,9 12,14 2,9"/><path d="M6 10 L6 15 C6 17 9 18 12 18 C15 18 18 17 18 15 L18 10"/><line x1="22" y1="9" x2="22" y2="14"/><circle cx="22" cy="15" r="0.9" fill="currentColor" stroke="none"/></symbol><symbol id="i-algorithms" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><line x1="2"  y1="12" x2="6"  y2="12"/><rect x="6" y="9" width="12" height="6" rx="0.5"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="9"  y1="9"  x2="9"  y2="15"/><line x1="13" y1="9"  x2="13" y2="15"/><line x1="9"  y1="12" x2="13" y2="12"/><circle cx="22" cy="12" r="0.9" fill="currentColor" stroke="none"/></symbol><symbol id="i-data" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="2"/><path d="M5 6 L5 18 C5 19.5 8.2 20.5 12 20.5 C15.8 20.5 19 19.5 19 18 L19 6"/><path d="M5 12 C5 13.5 8.2 14.5 12 14.5 C15.8 14.5 19 13.5 19 12"/><circle cx="9"  cy="12" r="0.6" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="0.6" fill="currentColor" stroke="none"/></symbol></defs></svg>
+<script src="script.js?v=20261104f" defer></script>
+</body>
+</html>

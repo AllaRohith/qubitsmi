@@ -1,0 +1,18 @@
+# macOS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# local tooling
+.claude/
+
+# local-only material — not part of the deployed site
+content/
+_icon-system.html
+
+# secrets and dependencies, in case a backend is added later
+.env
+.env.*
+node_modules/
+*.log
