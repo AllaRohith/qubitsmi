@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_icon-system.html
+Disallow: /content/
+Disallow: /.claude/
+
+Sitemap: https://www.qubitsemisolutions.com/sitemap.xml
