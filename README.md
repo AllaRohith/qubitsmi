@@ -26,7 +26,7 @@ A static site: plain HTML, one stylesheet, one script. No build step, no framewo
 
 ## Design system
 
-- **Look:** silicon-die / schematic language — the client's brand colours **blue #0A3EE4** and **green #A9D18E** (tokens `--brand-blue`, `--brand-green` in `styles.css`) on navy, mono labels, signal-trace rail, copper bond pads. Green is a pastel: use it on dark surfaces and the blue CTA panel only, never as text on white. Light and dark themes are equally polished; the theme is set before first paint from `localStorage` or the OS setting.
+- **Look:** silicon-die / schematic language — the client's brand colours **blue #0A3EE4** and **green #A9D18E** (tokens `--brand-blue`, `--brand-green` in `styles.css`) on navy, mono labels, copper bond pads (no margin rail or dot markers beside section labels — the client found them confusing). Green is a pastel: use it on dark surfaces and the blue CTA panel only, never as text on white. Light and dark themes are equally polished; the theme is set before first paint from `localStorage` or the OS setting.
 - **CSS layout** (all in `styles.css`): base + tokens → `HOME v2` → `SITE v2 · subpages` (shared `hv2-` components: page hero, cards, chips, datasheet tables, figures, CTA) → per-page blocks (`PAGE v2 · training`, `leav2-`, `conv2-`, `nfv2-`) → 3D chip, stack story, page transitions, opening scene, depth/texture.
 - **3D:** CSS-3D only (no library). The chip appears on **Home** (with the scroll story) and **Solutions**. Keep it to those two pages.
 - **Motion:** a once-per-visit opening scene, pointer tilt on the chip, a pinned scroll story ("Inside the stack"), cross-document page transitions (Chrome/Edge/Safari 18.2+), reveal-on-scroll. All of it respects `prefers-reduced-motion`; with JavaScript off the site renders as a normal static page.
@@ -35,12 +35,12 @@ A static site: plain HTML, one stylesheet, one script. No build step, no framewo
 ## Content rules
 
 - The client's own wording lives in `content/client-content.md` — check new copy against it, and keep the live-site additions section current.
-- No unverifiable claims: no fake "live" data, countdowns, scores or invented clients. The AXI waveform, GHZ circuit and chip figures are labelled illustrative.
+- No unverifiable claims: no fake "live" data, countdowns, scores or invented clients. Remaining figures (chip, pin-out, stack) are labelled illustrative. The AXI waveform and GHZ circuit examples were removed at the client's request — don't add them back.
 - Missing content is marked in the HTML with `<!-- PLACEHOLDER: … -->` comments: registered CIN (footer), leadership names/titles/photos, training dates/duration/delivery mode/fees, client logos.
 
 ## Contact form
 
-`contact.html` has no backend yet. A valid brief opens the visitor's email app, pre-filled, addressed to **sales@qubitsemisolutions.com** (business and training enquiries). **careers@qubitsemisolutions.com** is for careers. To collect submissions instead, set `FORM_ENDPOINT` in `script.js` (Formspree, Zoho Forms, a Catalyst function, …).
+`contact.html` has no backend yet. A valid brief opens a small chooser (Gmail · Outlook · email app · copy) pre-filled for **sales@qubitsemisolutions.com** — every `mailto:` link on mouse/trackpad devices does the same, because laptops without a mail app ignore plain `mailto:` links (phones keep the native behaviour). Sales covers business and training enquiries; **careers@qubitsemisolutions.com** is for careers. To collect submissions instead, set `FORM_ENDPOINT` in `script.js` (Formspree, Zoho Forms, a Catalyst function, …).
 
 ## SEO
 
