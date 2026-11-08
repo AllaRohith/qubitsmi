@@ -645,12 +645,12 @@
         '<button type="button" class="promo-x" data-promo-close aria-label="Close">' +
           '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>' +
         '</button>' +
-        '<header class="promo-head">' +
+        '<div class="promo-head">' +
           '<div class="promo-art" aria-hidden="true"><span class="promo-ring r1"><i></i></span><span class="promo-ring r2"><i></i></span><span class="promo-ring r3"><i></i></span><span class="promo-core"><b>Q</b></span></div>' +
           '<p class="promo-badge"><span aria-hidden="true"></span>Registrations open</p>' +
           '<h2 id="promo-title">Learn. Build. <em>Innovate.</em></h2>' +
           '<p class="promo-p">Industry-ready, hands-on training — real use cases and capstone projects. Pick a programme and register.</p>' +
-        '</header>' +
+        '</div>' +
         '<div class="promo-view" data-view="programs">' +
           '<div class="promo-progs">' + cards + '</div>' +
           '<div class="promo-foot"><button type="button" class="promo-no" data-promo-close>Maybe later</button></div>' +

@@ -5478,3 +5478,8 @@ body::after {
 .mailpick-x:hover { color: var(--text); background: var(--accent-soft); }
 @media print { .mailpick { display: none; } }
 /* ══ /SITE · mail chooser ══ */
+
+/* ══ SITE · readability — small utility text (accessibility pass) ══ */
+.nav-drawer-meta { font-size: 14px; line-height: 1.8; }
+.sticky-cta-label { font-size: 12px; letter-spacing: 0.1em; }
+/* ══ /SITE · readability ══ */
