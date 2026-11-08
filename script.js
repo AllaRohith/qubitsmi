@@ -271,8 +271,12 @@
             '',
             data.get('brief') || '',
           ].join('\n');
-          window.location.href = 'mailto:' + MAILTO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-          showStatus(sent, '<b>// opening your email app</b><br>Your brief is drafted to ' + MAILTO + ' — press send there. Nothing opened? Email us directly at that address.');
+          if (window.QSMail) {
+            window.QSMail.show({ to: MAILTO, subject: subject, body: body, note: 'Your brief is ready — choose how to send it.' });
+          } else {
+            window.location.href = 'mailto:' + MAILTO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+          }
+          showStatus(sent, '<b>// brief ready</b><br>Choose how to send it to ' + MAILTO + ' (Gmail, Outlook, your email app, or copy it).');
           return;
         }
 
@@ -281,7 +285,7 @@
           .then((r) => {
             if (!r.ok) throw new Error('HTTP ' + r.status);
             f.reset();
-            showStatus(sent, '<b>// brief received</b><br>Reply within 1 business day, IST business hours.');
+            showStatus(sent, '<b>// brief received</b><br>Thank you — we will be in touch.');
           })
           .catch(() => {
             showStatus(sent, '<b>// could not send</b><br>Please email ' + MAILTO + ' directly — your text is still in the form.');
@@ -573,8 +577,10 @@
 })();
 
 /* ── Registration pop-up ─────────────────────────────────────────────
-   Shown shortly after every page load until the visitor closes it; once closed it stays away for the rest of that
-   browser session (a new tab/visit shows it again). Add ?promo to any URL to force it.
+   Home: shown on every visit to the page (including when navigating back to it from another page).
+   Other pages: shown until the visitor closes it, then not again for the rest of that browser session.
+   Once someone has registered (submitted the form / followed Register) it stops everywhere for the session.
+   Add ?promo to any URL to force it.
    It lists the training programmes; "Register" opens the registration form straight away.
    - REGISTER_URL set  → Register buttons open the client's own form (new tab).
    - REGISTER_URL empty → the form opens inside the pop-up; PROMO_ENDPOINT (if set) receives it,
@@ -583,7 +589,10 @@
   const REGISTER_URL = '';            // e.g. 'https://forms.zoho.in/…' — the client's registration form, when they send it
   const PROMO_ENDPOINT = '';          // optional: POST target (Zoho Forms, Formspree, a Catalyst function…)
   const MAILTO = 'sales@qubitsemisolutions.com';
-  const CLOSED_KEY = 'qsmi-promo-closed';
+  const CLOSED_KEY = 'qsmi-promo-closed';   // closed on a non-Home page
+  const DONE_KEY = 'qsmi-promo-done';       // registered this session
+  const isHome = /(^|\/)(index\.html)?$/.test(location.pathname);
+  const markDone = () => { try { sessionStorage.setItem(DONE_KEY, '1'); } catch (e) {} };
   const forced = /[?&]promo\b/.test(location.search);       // add ?promo to any URL to preview it
 
   const PROGRAMMES = [
@@ -597,7 +606,12 @@
 
   if (document.body.classList.contains('nf')) return;      // not on the 404 page
   try { localStorage.removeItem('qsmi-promo'); } catch (e) {}   // old key from earlier versions
-  try { if (!forced && sessionStorage.getItem(CLOSED_KEY)) return; } catch (e) {}
+  try {
+    if (!forced) {
+      if (sessionStorage.getItem(DONE_KEY)) return;
+      if (!isHome && sessionStorage.getItem(CLOSED_KEY)) return;
+    }
+  } catch (e) {}
 
   const external = /^https?:\/\//i.test(REGISTER_URL);
   const root = document.documentElement;
@@ -631,12 +645,12 @@
         '<button type="button" class="promo-x" data-promo-close aria-label="Close">' +
           '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>' +
         '</button>' +
-        '<header class="promo-head">' +
+        '<div class="promo-head">' +
           '<div class="promo-art" aria-hidden="true"><span class="promo-ring r1"><i></i></span><span class="promo-ring r2"><i></i></span><span class="promo-ring r3"><i></i></span><span class="promo-core"><b>Q</b></span></div>' +
           '<p class="promo-badge"><span aria-hidden="true"></span>Registrations open</p>' +
           '<h2 id="promo-title">Learn. Build. <em>Innovate.</em></h2>' +
           '<p class="promo-p">Industry-ready, hands-on training — real use cases and capstone projects. Pick a programme and register.</p>' +
-        '</header>' +
+        '</div>' +
         '<div class="promo-view" data-view="programs">' +
           '<div class="promo-progs">' + cards + '</div>' +
           '<div class="promo-foot"><button type="button" class="promo-no" data-promo-close>Maybe later</button></div>' +
@@ -689,12 +703,15 @@
     if (PROMO_ENDPOINT) {
       const data = new FormData(form); data.set('programme', prog);
       fetch(PROMO_ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
-        .then((r) => { if (!r.ok) throw 0; form.reset(); done('Thank you — your registration is in. We will contact you shortly.'); })
+        .then((r) => { if (!r.ok) throw 0; form.reset(); markDone(); done('Thank you — your registration is in. We will contact you shortly.'); })
         .catch(() => { status.textContent = 'Could not send. Please email ' + MAILTO + ' directly.'; status.className = 'promo-status is-err'; });
       return;
     }
-    window.location.href = 'mailto:' + MAILTO + '?subject=' + encodeURIComponent('Training registration — ' + prog) + '&body=' + encodeURIComponent(lines.join('\n'));
-    done('Opening your email app with the registration drafted — press send there. Nothing opened? Email ' + MAILTO + '.');
+    const subj = 'Training registration — ' + prog, text = lines.join('\n');
+    if (window.QSMail) window.QSMail.show({ to: MAILTO, subject: subj, body: text, note: 'Your registration is ready — choose how to send it.' });
+    else window.location.href = 'mailto:' + MAILTO + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(text);
+    markDone();
+    done('Registration ready — choose how to send it to ' + MAILTO + ' (Gmail, Outlook, your email app, or copy it).');
   }
 
   function open() {
@@ -712,6 +729,7 @@
     }, 30);
     box.addEventListener('click', (e) => {
       if (e.target.closest('[data-promo-close]')) return close();
+      if (e.target.closest('a.promo-go')) markDone();      // external registration form opened
       const reg = e.target.closest('[data-reg]');
       if (reg) {
         const sel = box.querySelector('select[name=programme]');
@@ -740,4 +758,125 @@
   }
   if (document.readyState === 'complete') schedule();
   else window.addEventListener('load', schedule, { once: true });
+})();
+
+/* ── Contact map: the embedded satellite map ignores the pointer until it is clicked,
+   so scrolling the page with the wheel or a finger never gets trapped inside the map. */
+(function () {
+  const wrap = document.querySelector('[data-map]');
+  if (!wrap) return;
+  const on = () => wrap.classList.add('is-active');
+  const off = () => wrap.classList.remove('is-active');
+  wrap.addEventListener('click', on);
+  wrap.addEventListener('mouseleave', off);
+  document.addEventListener('click', (e) => { if (!wrap.contains(e.target)) off(); });
+})();
+
+
+/* ── Mail chooser ──────────────────────────────────────────────────────
+   mailto: links do nothing on a laptop with no mail app set up. On mouse/trackpad devices every
+   mailto: link (and the contact / registration forms, which have no backend yet) opens a small
+   chooser instead: Gmail · Outlook · email app · copy. Phones keep the native mailto: behaviour.
+   Real fix when a backend exists: set FORM_ENDPOINT / PROMO_ENDPOINT above. */
+(function () {
+  let pick, opener, onKey, onDoc;
+  const e = encodeURIComponent;
+
+  function parse(href) {
+    const raw = href.replace(/^mailto:/i, '');
+    const q = raw.indexOf('?');
+    const to = decodeURIComponent(q < 0 ? raw : raw.slice(0, q));
+    const p = new URLSearchParams(q < 0 ? '' : raw.slice(q + 1));
+    return { to: to, subject: p.get('subject') || '', body: p.get('body') || '' };
+  }
+
+  function copy(text, btn, label) {
+    const done = () => { btn.textContent = 'Copied ✓'; setTimeout(() => { btn.textContent = label; }, 1600); };
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done, fallback); return; }
+    fallback();
+    function fallback() {
+      const t = document.createElement('textarea');
+      t.value = text; t.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (err) { btn.textContent = 'Press Ctrl/⌘+C'; }
+      t.remove();
+    }
+  }
+
+  function close() {
+    if (!pick) return;
+    document.removeEventListener('keydown', onKey);
+    document.removeEventListener('click', onDoc, true);
+    pick.remove(); pick = null;
+    if (opener && opener.focus) opener.focus();
+  }
+
+  function show(m) {
+    close();
+    opener = document.activeElement;
+    const link = (m.anchor && m.anchor.getBoundingClientRect) ? m.anchor : null;
+    const opt = (k, v) => (v ? '&' + k + '=' + e(v) : '');
+    const gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + e(m.to) + opt('su', m.subject) + opt('body', m.body);
+    const outlook = 'https://outlook.office.com/mail/deeplink/compose?to=' + e(m.to) + opt('subject', m.subject) + opt('body', m.body);
+    const app = 'mailto:' + m.to + (m.subject || m.body ? '?' + (opt('subject', m.subject) + opt('body', m.body)).slice(1) : '');
+    pick = document.createElement('div');
+    pick.className = 'mailpick' + (link ? '' : ' is-center');
+    pick.setAttribute('role', 'dialog');
+    pick.setAttribute('aria-label', 'Choose how to send this email');
+    pick.innerHTML =
+      '<p class="mailpick-t">' + (m.note ? m.note : 'Email us at') + '</p>' +
+      '<p class="mailpick-to"></p>' +
+      '<div class="mailpick-row">' +
+        '<a class="mailpick-b" href="' + gmail + '" target="_blank" rel="noopener">Gmail</a>' +
+        '<a class="mailpick-b" href="' + outlook + '" target="_blank" rel="noopener">Outlook</a>' +
+        '<a class="mailpick-b" href="' + app + '">Email app</a>' +
+        '<button type="button" class="mailpick-b" data-copy="to">Copy address</button>' +
+        (m.body ? '<button type="button" class="mailpick-b" data-copy="msg">Copy message</button>' : '') +
+      '</div>' +
+      '<button type="button" class="mailpick-x" aria-label="Close">×</button>';
+    pick.querySelector('.mailpick-to').textContent = m.to;
+    document.body.appendChild(pick);
+
+    if (link) {                                   // anchor under (or above) the clicked link, kept inside the viewport
+      const r = link.getBoundingClientRect(), w = pick.offsetWidth, h = pick.offsetHeight;
+      let top = r.bottom + 8;
+      if (top + h > innerHeight - 8) top = Math.max(8, r.top - h - 8);
+      pick.style.top = top + 'px';
+      pick.style.left = Math.min(Math.max(8, r.left), Math.max(8, innerWidth - w - 8)) + 'px';
+    }
+
+    pick.addEventListener('click', (ev) => {
+      const b = ev.target.closest('a, button');
+      if (!b) return;
+      if (b.classList.contains('mailpick-x')) return close();
+      if (b.dataset.copy) {
+        copy(b.dataset.copy === 'to' ? m.to : ('To: ' + m.to + '\nSubject: ' + m.subject + '\n\n' + m.body), b, b.textContent);
+        return;
+      }
+      setTimeout(close, 0);                       // a link was followed
+    });
+    onKey = (ev) => {
+      if (ev.key === 'Escape') { close(); return; }
+      if (ev.key !== 'Tab') return;
+      const f = pick.querySelectorAll('a, button'), first = f[0], last = f[f.length - 1];
+      if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+      else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+    };
+    onDoc = (ev) => { if (pick && !pick.contains(ev.target)) close(); };
+    document.addEventListener('keydown', onKey);
+    setTimeout(() => document.addEventListener('click', onDoc, true), 0);
+    pick.querySelector('.mailpick-b').focus({ preventScroll: true });
+  }
+
+  window.QSMail = { show: show };
+
+  // every mailto: link on mouse/trackpad devices; phones keep the native handler
+  document.addEventListener('click', (ev) => {
+    const a = ev.target.closest && ev.target.closest('a[href^="mailto:" i]');
+    if (!a || a.closest('.mailpick') || ev.defaultPrevented) return;
+    if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || ev.button) return;
+    if (window.matchMedia && matchMedia('(pointer: coarse)').matches) return;
+    ev.preventDefault();
+    const m = parse(a.getAttribute('href')); m.anchor = a;
+    show(m);
+  });
 })();
