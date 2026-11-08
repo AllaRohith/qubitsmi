@@ -276,7 +276,7 @@
           } else {
             window.location.href = 'mailto:' + MAILTO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
           }
-          showStatus(sent, '<b>// brief ready</b><br>Choose how to send it to ' + MAILTO + ' (Gmail, Outlook, your email app, or copy it).');
+          showStatus(sent, '<b>Brief ready</b><br>Choose how to send it to ' + MAILTO + ' (Gmail, Outlook, your email app, or copy it).');
           return;
         }
 
@@ -285,10 +285,10 @@
           .then((r) => {
             if (!r.ok) throw new Error('HTTP ' + r.status);
             f.reset();
-            showStatus(sent, '<b>// brief received</b><br>Thank you — we will be in touch.');
+            showStatus(sent, '<b>Brief received</b><br>Thank you — we will be in touch.');
           })
           .catch(() => {
-            showStatus(sent, '<b>// could not send</b><br>Please email ' + MAILTO + ' directly — your text is still in the form.');
+            showStatus(sent, '<b>Could not send</b><br>Please email ' + MAILTO + ' directly — your text is still in the form.');
           })
           .finally(() => { if (btn) btn.removeAttribute('aria-disabled'); });
       });
@@ -363,6 +363,9 @@
     const chip = document.querySelector('[data-chip3d]');
     if (!chip || !window.matchMedia) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // The pinned story needs position: sticky to survive overflow-x: clip on html/body (older iOS / Android WebViews
+    // lack it and the pin breaks). Those devices keep the plain stacked layout instead of a half-working story.
+    if (!(window.CSS && CSS.supports && CSS.supports('overflow-x', 'clip') && CSS.supports('position', 'sticky'))) return;
 
     const scene = document.querySelector('[data-story]');
     const hero = scene && scene.querySelector('.hv2-hero');

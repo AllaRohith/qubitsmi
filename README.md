@@ -30,12 +30,13 @@ A static site: plain HTML, one stylesheet, one script. No build step, no framewo
 - **CSS layout** (all in `styles.css`): base + tokens → `HOME v2` → `SITE v2 · subpages` (shared `hv2-` components: page hero, cards, chips, datasheet tables, figures, CTA) → per-page blocks (`PAGE v2 · training`, `leav2-`, `conv2-`, `nfv2-`) → 3D chip, stack story, page transitions, opening scene, depth/texture.
 - **3D:** CSS-3D only (no library). The chip appears on **Home** (with the scroll story) and **Solutions**. Keep it to those two pages.
 - **Motion:** a once-per-visit opening scene, pointer tilt on the chip, a pinned scroll story ("Inside the stack"), cross-document page transitions (Chrome/Edge/Safari 18.2+), reveal-on-scroll. All of it respects `prefers-reduced-motion`; with JavaScript off the site renders as a normal static page.
+- **Older devices:** the 3D chip skips its assemble animation without `@property` support, and the pinned "Inside the stack" story only runs where `overflow-x: clip` and `position: sticky` work — otherwise the stacked static layout shows (same as no-JS).
 - **Accessibility:** skip link, landmarks, one `h1` per page, keyboard-operable drawer and tabs (arrow keys, `#ai` / `#de` / `#qt` deep links), visible focus, AA contrast in both themes.
 
 ## Content rules
 
 - The client's own wording lives in `content/client-content.md` — check new copy against it, and keep the live-site additions section current.
-- No unverifiable claims: no fake "live" data, countdowns, scores or invented clients. Remaining figures (chip, pin-out, stack) are labelled illustrative. The AXI waveform and GHZ circuit examples were removed at the client's request — don't add them back.
+- No unverifiable claims: no fake "live" data, countdowns, scores or invented clients. Remaining figures (chip stack, Contact pin-out, Training schematic, 404 pin-out) are labelled illustrative. Removed at the client's request: the AXI waveform, GHZ circuits, SystemVerilog sample, the Leadership clock-tree and Chip role portraits, and the Home DV pin-out — don't add them back. The AXI waveform and GHZ circuit examples were removed at the client's request — don't add them back.
 - Missing content is marked in the HTML with `<!-- PLACEHOLDER: … -->` comments: registered CIN (footer), leadership names/titles/photos, training dates/duration/delivery mode/fees, client logos.
 
 ## Contact form

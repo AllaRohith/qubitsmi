@@ -63,8 +63,8 @@
 }
 </script>
 <script>/* runs before first paint: theme, js flag, page-transition support and the once-per-visit opening scene */
-(function(d){d.classList.add('js');if('CSSViewTransitionRule' in window)d.classList.add('vt');try{if(!sessionStorage.getItem('qsmi-intro')&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){sessionStorage.setItem('qsmi-intro','1');d.classList.add('intro','intro-wait');var go=function(){d.classList.remove('intro-wait')};document.addEventListener('DOMContentLoaded',function(){try{document.fonts.load('600 1em "Space Grotesk"').then(go,go)}catch(e){go()}});setTimeout(go,1100);setTimeout(function(){d.classList.remove('intro')},4200)}}catch(e){}var t=null;try{t=localStorage.getItem('qsmi-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='dark'?'#060c1a':'#ffffff')})(document.documentElement);</script>
-<link rel="stylesheet" href="styles.css?v=20261108f" />
+(function(d){d.classList.add('js');if(!(window.CSS&&CSS.registerProperty))d.classList.add('no-prop');if('CSSViewTransitionRule' in window)d.classList.add('vt');try{if(!sessionStorage.getItem('qsmi-intro')&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){sessionStorage.setItem('qsmi-intro','1');d.classList.add('intro','intro-wait');var go=function(){d.classList.remove('intro-wait')};document.addEventListener('DOMContentLoaded',function(){try{document.fonts.load('600 1em "Space Grotesk"').then(go,go)}catch(e){go()}});setTimeout(go,1100);setTimeout(function(){d.classList.remove('intro')},4200)}}catch(e){}var t=null;try{t=localStorage.getItem('qsmi-theme')}catch(e){}if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',t==='dark'?'#060c1a':'#ffffff')})(document.documentElement);</script>
+<link rel="stylesheet" href="styles.css?v=20261108p" />
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -426,28 +426,6 @@
           </div>
         </li>
       </ul>
-
-      <figure class="hv2-pinout reveal" data-reveal-delay="1">
-        <div class="hv2-pinout-grid">
-          <ul class="hv2-pins hv2-pins--top" aria-label="Bus and interconnect protocols">
-            <li>AXI</li><li>AHB</li><li>APB</li><li>PCIe</li><li>DDR3</li>
-          </ul>
-          <ul class="hv2-pins hv2-pins--left" aria-label="Verification languages and methodology">
-            <li>SystemVerilog</li><li>UVM</li><li>SVA</li>
-          </ul>
-          <div class="hv2-chip">
-            <span class="hv2-chip-big">DV</span>
-            <span class="hv2-chip-sub">Protocols &amp; tooling</span>
-          </div>
-          <ul class="hv2-pins hv2-pins--right" aria-label="Verification platforms and sign-off">
-            <li>Palladium</li><li>Gate-level sim</li><li>Coverage closure</li>
-          </ul>
-          <ul class="hv2-pins hv2-pins--bot" aria-label="Memory and peripheral protocols">
-            <li>NAND Flash</li><li>I²C</li><li>SPI</li><li>UART</li>
-          </ul>
-        </div>
-        <figcaption><b>Fig. 2</b> Protocols (top and bottom pins) and verification tooling (side pins) our engineers work with.</figcaption>
-      </figure>
     </div>
 
     <!-- PLACEHOLDER: client logos. Domains below come from the client's Solutions content (Domain Expertise); add approved client names/logos here when available. Do not invent names. -->
@@ -543,7 +521,7 @@
           <p class="hv2-practice-tag">Focus area · Quantum</p>
         </div>
         <h3>Quantum technologies</h3>
-        <p class="hv2-practice-text">We work with customers and partners across quantum computing, quantum communication, quantum machine learning and quantum semiconductors — contributing, through engineering collaboration and technical development, to initiatives advancing quantum technologies and their applications.</p>
+        <p class="hv2-practice-text">Our expertise spans quantum algorithms, quantum computing, quantum communication, cryptography, quantum error correction, and quantum system optimization. We focus on developing innovative algorithms, secure communication protocols, and noise-resilient quantum solutions to address emerging challenges in computing, cybersecurity, and next-generation technologies.</p>
         <ul class="hv2-services">
           <li><strong>Quantum computing &amp; ML</strong><span>Quantum algorithms, quantum machine learning and simulation</span></li>
           <li><strong>Quantum communication</strong><span>QKD protocols, QRNG and post-quantum cryptography</span></li>
@@ -745,7 +723,7 @@
       </div>
 
       <div>
-        <h2>// PAGES</h2>
+        <h2>Pages</h2>
         <ul>
           <li><a href="index.html">About</a></li>
           <li><a href="solutions.html">Solutions</a></li>
@@ -756,7 +734,7 @@
       </div>
 
       <div>
-        <h2>// SOLUTIONS</h2>
+        <h2>Solutions</h2>
         <ul>
           <li><a href="solutions.html#vlsi">VLSI · Verification</a></li>
           <li><a href="solutions.html#vlsi">FPGA · Bring-up</a></li>
@@ -766,7 +744,7 @@
       </div>
 
       <div>
-        <h2>// REACH US</h2>
+        <h2>Reach us</h2>
         <ul>
           <li>3H, Dwaraka Pride</li>
           <li>Huda Techno Enclave, Madhapur</li>
@@ -778,8 +756,8 @@
     </div>
 
     <div class="colophon">
-      <div class="colophon-cell"><span class="ck">// PRACTICES</span><span class="cv">VLSI · Quantum · Training</span></div>
-      <div class="colophon-cell"><span class="ck">// HQ</span><span class="cv">HITEC City, Hyderabad</span></div>
+      <div class="colophon-cell"><span class="ck">Practices</span><span class="cv">VLSI · Quantum · Training</span></div>
+      <div class="colophon-cell"><span class="ck">HQ</span><span class="cv">HITEC City, Hyderabad</span></div>
       <div class="colophon-sig">
         <span class="sig-k">MAIL</span><a class="sig-v" href="mailto:sales@qubitsemisolutions.com">sales@qubitsemisolutions.com</a>
       </div>
@@ -810,6 +788,6 @@
       <path d="M3 20 C3 16.5 6 14.5 9 14.5 C12 14.5 15 16.5 15 20"/>
       <path d="M14 20 C14 17 16 15 18 18 C20 15 22 17 22 20"/>
     </symbol></svg>
-<script src="script.js?v=20261108f" defer></script>
+<script src="script.js?v=20261108p" defer></script>
 </body>
 </html>

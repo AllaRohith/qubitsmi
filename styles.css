@@ -4073,6 +4073,7 @@ a.sig-v:hover { text-decoration: underline; text-underline-offset: 3px; }
 .hv2 .conv2-form input[aria-invalid="true"]:focus,
 .hv2 .conv2-form select[aria-invalid="true"]:focus,
 .hv2 .conv2-form textarea[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 1px var(--err);   /* fallback for browsers without color-mix() */
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--err) 18%, transparent), 0 0 0 1px var(--err);
 }
 .hv2 .conv2-form .field-error {
@@ -5483,3 +5484,27 @@ body::after {
 .nav-drawer-meta { font-size: 14px; line-height: 1.8; }
 .sticky-cta-label { font-size: 12px; letter-spacing: 0.1em; }
 /* ══ /SITE · readability ══ */
+
+/* ══ SITE · footer strip labels keep their uppercase look now the "//" prefixes are gone ══ */
+.colophon-cell .ck, .colophon-sig .sig-k { text-transform: uppercase; }
+/* ══ /SITE · footer strip labels ══ */
+
+/* ══ SITE · footer columns: keep the longer email address on one line on mid-width desktops ══ */
+@media (min-width: 981px) and (max-width: 1280px) {
+  .footprint-grid { grid-template-columns: 1.1fr 0.8fr 1fr 1.8fr; gap: 28px; }
+}
+/* ══ /SITE · footer columns ══ */
+
+/* ══ SITE · Home vision: the three reasons run across the full width now the pin-out figure is gone ══ */
+@media (min-width: 981px) {
+  .hv2-why-grid { grid-template-columns: minmax(0, 1fr); }
+  .hv2-why .hv2-reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(24px, 3vw, 56px); border-top: 0; }
+  .hv2-why .hv2-reasons > li { grid-template-columns: minmax(0, 1fr); gap: 14px; align-content: start; padding: 26px 0 8px; border-top: 1px solid var(--line-strong); border-bottom: 0; }
+}
+/* ══ /SITE · Home vision reasons ══ */
+
+/* ══ SITE · older-device hardening (client review #12) ══
+   Browsers without @property (Safari < 16.4, Firefox < 128) cannot animate --hv2-intro, so the 3D chip
+   layers would sit on one plane for a second and flicker. Skip the assemble animation there. */
+.no-prop .hv2-3d { animation: none; }
+/* ══ /SITE · older-device hardening ══ */
